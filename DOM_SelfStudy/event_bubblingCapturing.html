@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--to see inside the browser css style-->
+        <style>
+            div {
+                min-width: 100px;
+                min-height: 100px;
+                padding: 30px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="grandParent">
+            GrandParent
+            <div id="parent">
+                Parent
+                <div id="child">Child</div>
+            </div>
+        </div>
+        <hr />
+        <div id="grandParent2">
+            GrandParent
+            <div id="parent2">
+                Parent
+                <div id="child2">Child</div>
+            </div>
+        </div>
+
+        <script src="./event_bubblingCapturing.js"></script>
+    </body>
+</html>
