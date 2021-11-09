@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1bc1fc-db39-4751-b652-a40f333ab610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Fundamental/truthyFalsy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamental/Exporting_Variables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamental/VariablesTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamental/function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamental/truthyFalsy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamental/variable.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,10 +31,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.div.html">
+    <configuration name="div.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Asynchronous/Assignment1/div.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Problem4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Assignment1/Problem4.js" working-dir="$PROJECT_DIR$/Assignment1">
+      <method v="2" />
+    </configuration>
+    <configuration name="problem.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Assignment1/problem.js" working-dir="$PROJECT_DIR$/Assignment1">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.div.html" />
+        <item itemvalue="Node.js.problem.js" />
+        <item itemvalue="Node.js.Problem4.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,6 +64,9 @@
       <option name="presentableId" value="Default" />
       <updated>1635891757317</updated>
       <workItem from="1635891778443" duration="442000" />
+      <workItem from="1636349018533" duration="3569000" />
+      <workItem from="1636478070173" duration="140000" />
+      <workItem from="1636478873674" duration="598000" />
     </task>
     <servers />
   </component>
