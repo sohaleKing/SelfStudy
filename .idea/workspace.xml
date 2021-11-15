@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1bc1fc-db39-4751-b652-a40f333ab610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebAPI/setTimeout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM_SelfStudy/event_bubblingCapturing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM_SelfStudy/event_bubblingCapturing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOM_SelfStudy/quiz9.html" beforeDir="false" afterPath="$PROJECT_DIR$/DOM_SelfStudy/quiz9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOM_SelfStudy/quiz9.js" beforeDir="false" afterPath="$PROJECT_DIR$/DOM_SelfStudy/quiz9.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,7 @@
       <workItem from="1636478070173" duration="140000" />
       <workItem from="1636478873674" duration="598000" />
       <workItem from="1636742945829" duration="5364000" />
+      <workItem from="1636997409457" duration="967000" />
     </task>
     <servers />
   </component>
