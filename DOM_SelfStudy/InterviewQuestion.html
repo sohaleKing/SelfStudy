@@ -16,15 +16,32 @@
             <input type="text" name="cc" />
         </form>
         <script>
+            document.querySelectorAll("form").forEach((elem) => {
+                elem.addEventListener("click", (event) => {
+                    readFormObject(event.path[1].id)
+                })
+            })
             const readFormObject = (formId) => {
                 const inputs = document.forms[formId].querySelectorAll("input")
                 const obj = {}
+                /******************to have a nested object**************/
+                // const keys = new Array()
+                // inputs.forEach((input)=>{
+                //     keys.push(input.name)
+                // })
+                // const objectInjection = (key, value) => {
+                //     obj[key] = { key: value }
+                // }
+                // inputs.forEach((input) => {
+                //     objectInjection(input.name, input.value)
+                // })
 
+                //}
                 /******************to have a flat object**************/
                 inputs.forEach((input) => {
                     obj[input.name] = input.value
                 })
-                console.log(keys)
+
                 return obj
             }
             console.log(readFormObject("payment-info"))
