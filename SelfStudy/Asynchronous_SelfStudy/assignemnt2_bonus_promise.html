@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> </head>
+    <body>
+        <button onclick="console.log('hi')">say hi</button>
+        <button onclick="blockerExample()">long process</button>
+        <script>
+            const blockerExample = () => {
+                function fibonacci(n) {
+                    return n < 1
+                        ? 0
+                        : n <= 2
+                        ? 1
+                        : fibonacci(n - 1) + fibonacci(n - 2)
+                }
+
+                function getResults() {
+                    let arr = []
+
+                    let x = 2000
+                    let y = 2000
+
+                    arr.push(fibonacci(x) + fibonacci(y)) //just means a long process to do!!
+
+                    return arr
+                }
+                const p = new Promise((resolve) => {
+                    const results = getResults()
+                    resolve(results)
+                })
+
+                p.then(console.log("solved!"))
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> </head>
+    <body>
+        <button onclick="console.log('hi')">say hi</button>
+        <button onclick="blockerExample()">long process</button>
+        <script>
+            const blockerExample = () => {
+                function fibonacci(n) {
+                    return n < 1
+                        ? 0
+                        : n <= 2
+                        ? 1
+                        : fibonacci(n - 1) + fibonacci(n - 2)
+                }
+
+                function getResults() {
+                    let arr = []
+
+                    let x = 2
+                    let y = 2
+
+                    arr.push(fibonacci(x) + fibonacci(y)) //just means a long process to do!!
+
+                    return arr
+                }
+
+                /***************if you put it straight it would be a blocking!!!***********/
+                const results = getResults()
+                console.log(results)
+            }
+        </script>
+    </body>
+</html>
