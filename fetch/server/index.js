@@ -7,7 +7,7 @@ const app = express()
 app.use(express.static("public"))
 
 app.get("/cat", (req, res) => {
-    const TIMEOUT_MS = 5000
+    const TIMEOUT_MS = 200
 
     const timeoutPromise = new Promise((_, reject) => {
         setTimeout(() => {

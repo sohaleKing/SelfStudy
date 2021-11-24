@@ -31,4 +31,34 @@ function makeRequest() {
 
 makeRequest()
 
-console.log("test")
+const button = document.getElementsByTagName("button")[0]
+
+button.onclick = function () {
+    // Show spinner
+
+    fetch("/cat")
+        .then((response) => {
+            // console.log(response)
+            if (!response.ok) {
+                return Promise.reject("Server Unavailable")
+            }
+
+            return response.text()
+        })
+        .then((catUrl) => {
+            // console.log(catUrl)
+            const img = document.createElement("img")
+            img.setAttribute("src", catUrl)
+            document.body.appendChild(img)
+            // Stop showing spinner
+        })
+        .catch((error) => {
+            alert(`Error: ${error}`)
+            // Stop showing spinner
+        })
+        .finally(() => {
+            // Stop showing spinner
+        })
+}
+
+// console.log(button)
