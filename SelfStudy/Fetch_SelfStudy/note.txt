@@ -1,0 +1,45 @@
+JS engine is single thread --> taking advantage of other thread on your computer--. has its own JS run time enviroment!! so it wont block or slow down your own thread! browser stay interactive
+there is web worker API (MDN)
+expensive calculation taking lots of CPU time!! 
+you can also use callback syntax on web worker and promise syntax 
+calling server and come back answer time--> the whole roundtrip called "ping" --> 25 second
+--------------------------------------------------------
+Network latency is the time it takes for data or a request to go from the source to the destination.(client to server and back to client) Latency in networks is measured in milliseconds. The closer your latency is to zero, the better.
+------------------------------------------------------------
+******** HOW TO MAKE A simple SERVER ********
+1- make server folder and navigate there by change your directory (cd ..) \fetch\server>
+2- npm init --> node package manager --> npm init <initializer> can be used to set up a new or existing npm package.
+it will create the package.json
+it will ask you question about your server and then at the end by "yes" you will confirm the server information
+* as you see the entry point called index.js! so we need to create that one too in future!
+3- then going inside the package.json and modify the script test to 
+"start": "nodemon"
+* automatically restart the server on changes so we dont have to manually stop the server, start the server, everytime I change the code!
+nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+so for that we need to install nodemon
+4-npm i nodemon
+5- npm i express
+express is a framework to write your server code! opionniated way of writing your server logic! like a coloring book, gives you drawing
+but you have to color it! 
+6- make an index.js and take care of the rest from there!!
+7-inside the index.js you need to 
+const express = require("express")
+const app = express()
+app.get('path', (req, res) => {res.send("hello world")})
+app.listen(portnumber, handler callback)
+8-now make something on client folder called index.html but we can also serve the html from the server 
+so we make a public folder and put the index.html there! (we put it in public to keep it seperate from server files!!)
+.gitignor inside we put node_modules/ just to prevent uploading node to git!!
+-----------------------------------------------------------------------------------------
+to see how to serve the html, google this
+express serve static files (files dont change!!) if we dont put html, the console.log on get res.send("text") the text will be served!
+https://expressjs.com/en/starter/static-files.html
+app.use(express.static('public'))
+--------------------------------------------------------------------------------------------
+//if you check the network you would see you got both files! html and main.js
+//the network got localhost html first and then it got main.js file!
+sturcture ====>  fetch().then(callback)   since fetch always return a promise
+fetch(which server, where, you want to make your request?)
+200 means OK
+404 not found!!
+304 browser is catching!! Crt+r => refresh   crt+shift+r ==> dont use cach (will get 200 again!)

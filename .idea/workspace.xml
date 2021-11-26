@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d1bc1fc-db39-4751-b652-a40f333ab610" name="Changes" comment="" />
+    <list default="true" id="7d1bc1fc-db39-4751-b652-a40f333ab610" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,29 +32,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.DateTime.js">
-    <configuration name="div.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Asynchronous/Assignment1/div.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Node.js.test.js (1)">
+    <configuration name="assignemnt2_bonus_promise.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Asynchronous/SelfStudy/Asynchronous_SelfStudy/assignemnt2_bonus_promise.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="DateTime.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fundamental_selfStudy/DateTime.js" working-dir="$PROJECT_DIR$/fundamental_selfStudy">
       <method v="2" />
     </configuration>
-    <configuration name="Problem4.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Assignment1/Problem4.js" working-dir="$PROJECT_DIR$/Assignment1">
-      <method v="2" />
-    </configuration>
-    <configuration name="problem.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Assignment1/problem.js" working-dir="$PROJECT_DIR$/Assignment1">
-      <method v="2" />
-    </configuration>
     <configuration name="setTimeout.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/WebAPI/setTimeout.js" working-dir="$PROJECT_DIR$/WebAPI">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/SelfStudy/Asynchronous_SelfStudy/test.js" working-dir="$PROJECT_DIR$/SelfStudy/Asynchronous_SelfStudy">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/WebAPI/test.js" working-dir="$PROJECT_DIR$/WebAPI">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.test.js (1)" />
+        <item itemvalue="Node.js.test.js" />
+        <item itemvalue="JavaScript Debug.assignemnt2_bonus_promise.html" />
         <item itemvalue="Node.js.DateTime.js" />
         <item itemvalue="Node.js.setTimeout.js" />
-        <item itemvalue="JavaScript Debug.div.html" />
-        <item itemvalue="Node.js.problem.js" />
-        <item itemvalue="Node.js.Problem4.js" />
       </list>
     </recent_temporary>
   </component>
@@ -72,6 +74,9 @@
       <workItem from="1636997409457" duration="969000" />
       <workItem from="1637076206975" duration="3053000" />
       <workItem from="1637630255551" duration="123000" />
+      <workItem from="1637708390244" duration="2138000" />
+      <workItem from="1637720663515" duration="600000" />
+      <workItem from="1637897901742" duration="1198000" />
     </task>
     <servers />
   </component>

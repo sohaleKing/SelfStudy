@@ -1,0 +1,44 @@
+<!-- You are working for an online book store. -->
+<!-- You are given the following HTML structure of the checkout page to work with. -->
+<!-- Write a function that takes a form id as a parameter, and returns the input values as an object. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+    </head>
+    <body>
+        <form id="customer-info">
+            <input type="text" name="customer.name" />
+        </form>
+        <form id="payment-info">
+            <input type="text" name="customer.name" />
+            <input type="text" name="customer.address.city" />
+            <input type="text" name="cc" />
+        </form>
+        <script>
+            const readFormObject = (formId) => {
+                const inputs = document.forms[formId].querySelectorAll("input")
+                const obj = {}
+                inputs.forEach((input) => {
+                    obj[input.name] = input.value
+                })
+                console.log(obj)
+            }
+            readFormObject("payment-info")
+            /*
+            const paymentInfo = readFormObject('payment-info');
+            {
+                customer: {
+                    name: '',
+                    address: {
+                        city: ''
+                    }
+                },
+                cc: ''
+            }
+            */
+
+            /* Note : the nodeList are not arrays so you dont have all methods like map() */
+        </script>
+    </body>
+</html>
