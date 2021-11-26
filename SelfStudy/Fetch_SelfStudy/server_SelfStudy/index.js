@@ -15,9 +15,10 @@ app.use(express.static("public")) //this magic will serve the index inside the p
 
 //get shadow by above!! wont be apply!! that app.get()  ** so order matters
 //but we keep this since we would use the fetch and maybe need this to handle that address!!
+
 app.get("/myServer", (req, res) => {
     //fist argument is the path and second of called handler!
-    res.send("myServer")
+    res.send("Hello from myServer")
 })
 
 app.listen(2021, () => {

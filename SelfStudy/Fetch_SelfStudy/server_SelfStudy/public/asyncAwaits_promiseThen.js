@@ -1,7 +1,12 @@
 function asyncAwait() {
+    console.log("*********Async/Await Scenario********")
     async function myFunction() {
         console.log("A")
-        await fetch("/myServer")
+        let res = await fetch("/myServer")
+        console.log("D")
+        let data = await res.text()
+        console.log(data)
+        //promise resolved!!
         console.log("B")
     }
 
@@ -10,6 +15,7 @@ function asyncAwait() {
 }
 
 function promiseThen() {
+    console.log("********Promis/Then Scenario**********")
     function myFunction() {
         console.log("A")
         fetch("/myServer")
