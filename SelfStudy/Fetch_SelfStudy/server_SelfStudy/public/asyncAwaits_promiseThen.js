@@ -17,7 +17,7 @@ function asyncAwait() {
 function promiseThen() {
     console.log("********Promis/Then Scenario**********")
     function myFunction() {
-        console.log("A")
+        console.log("A") //instancetly
         fetch("/myServer")
             .then((res) => {
                 console.log("D")
@@ -25,11 +25,12 @@ function promiseThen() {
             })
             .then((data) => console.log(data))
         console.log("B")
+        return
     }
 
     myFunction()
     console.log("C")
 }
-
+//********async/await are the same as promise.then -- syntactly sugar */
 //asyncAwait()
 promiseThen()

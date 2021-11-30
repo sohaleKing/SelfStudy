@@ -18,7 +18,7 @@ app.use(express.static("public")) //this magic will serve the index inside the p
 
 app.get("/myServer", (req, res) => {
     //fist argument is the path and second of called handler!
-    res.send("Hello from myServer")
+    res.send("Hello from myServer taco")
 })
 
 app.listen(2021, () => {
