@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div name="grandparent">
+            <div name="parent">
+                <div name="child">Child</div>
+            </div>
+        </div>
+        <script>
+            const myGPDiv = document.getElementsByName("grandparent")[0]
+            const myParentDiv = document.getElementsByName("parent")[0]
+            const myChildDiv = document.getElementsByName("child")[0]
+            myGPDiv.addEventListener(
+                "click",
+                (e) => {
+                    console.log("gp clicked")
+                },
+                false
+            )
+            myParentDiv.addEventListener(
+                "click",
+                (e) => {
+                    console.log("parent clicked")
+                },
+                false
+            )
+            myChildDiv.addEventListener(
+                "click",
+                (e) => {
+                    console.log("child clicked", e.target.getAttribute("name"))
+                },
+                false
+            )
+        </script>
+    </body>
+</html>
