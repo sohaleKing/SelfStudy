@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            fetch("https://api.thedogapi.com/v1/images/search")
+                .then((res) => {
+                    return res.json()
+                })
+                .then((data) => {
+                    const makeDiv = (info) => {
+                        let newDiv = document.createElement("div")
+                        newDiv.innerHTML = `${info}`
+                        document.body.appendChild(newDiv)
+                    }
+                    const dogName = data[0].breeds[0].name
+                    const dogBreedFor = data[0].breeds[0].bred_for
+                    const dogBreedGroup = data[0].breeds[0].breed_group
+                    const dogSize = JSON.stringify(data[0].breeds[0].height)
+                    const image = document.createElement("img")
+                    image.setAttribute("src", `${data[0].url}`)
+                    image.setAttribute("width", "400")
+                    document.body.appendChild(image)
+                    makeDiv(dogName)
+                    makeDiv(dogBreedFor)
+                    makeDiv(dogBreedGroup)
+                    makeDiv(dogSize)
+                    document.createElement("img")
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        </script>
+    </body>
+</html>
