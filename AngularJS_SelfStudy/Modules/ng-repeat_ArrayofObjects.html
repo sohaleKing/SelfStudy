@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script></head>
+
+<body>
+<div ng-app="" ng-init="person = [
+                        {FirstName:'ali', LastName:'madani', age:50},
+                        {FirstName:'john', LastName:'doe', age:25},
+                        {FirstName:'eric', LastName:'pfizer', age:15},
+                        {FirstName:'saul', LastName:'goodman', age:34},
+                        {FirstName:'tim', LastName:'duncan', age:42}                       
+                        ]">
+<!-- The ng-repeat directive used on an array of objects -->
+        <ul>
+            <li ng-repeat="x in person">
+                {{x.FirstName + " " +x.LastName+ " is "+ x.age}}
+            </li>
+        </ul>
+</div>
+<!-- AngularJS is perfect for database CRUD (Create Read Update Delete) applications.
+Just imagine if these objects were records from a database. -->
+<scrip>
+</scrip>
+</body>
+</html>

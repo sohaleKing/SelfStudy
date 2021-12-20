@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<form ng-app="" name="myForm">     
+    Email:
+    <input type="email" name="myEmail" ng-model="anyVar">
+    <span ng-show="myForm.myEmail.$error.email">email address is not valid</span>
+</form> <!-- without submit button and seding to backend -->
+<script>
+   
+</script>
+
+</body>
+</html>

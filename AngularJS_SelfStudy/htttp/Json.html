@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<ul>
+  <li ng-repeat="x in myData">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+  $http.get("https://www.w3schools.com/angular/customers.php").then(function (response) {
+      $scope.myData = response.data.records;
+  });
+});
+</script>
+<!-- The application defines the customersCtrl controller, with a $scope and $http object.
+
+$http is an XMLHttpRequest object for requesting external data.
+
+$http.get() reads JSON data from https://www.w3schools.com/angular/customers.php.
+
+On success, the controller creates a property, myData, in the scope, with JSON data from the server.
+-->
+</body>
+</html>

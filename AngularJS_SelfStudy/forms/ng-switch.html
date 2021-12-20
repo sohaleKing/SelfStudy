@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+           
+        </style>
+    </head>
+    
+    <body ng-app="">
+        <form>
+            Pick a topic:
+            <input type="radio" ng-model="mySport" value="basket">Basketball
+            <input type="radio" ng-model="mySport" value="soccer">Soccer
+            <input type="radio" ng-model="mySport" value="football">Football
+        </form>
+        <div ng-switch="mySport">
+           <div ng-switch-when="basket">
+             basketball is fun
+           </div>
+           <div ng-switch-when="soccer">
+             soccer is the best
+           </div>
+           <div ng-switch-when="football">
+             football is my favorite one
+           </div>
+        </div>
+         
+        <script>
+          
+        </script>
+    </body>
+</html>

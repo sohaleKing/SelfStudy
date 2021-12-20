@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Display Object</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+var person = {
+		fname:"John",
+        lname:"ali",
+        age:30,
+        city:"New York",
+        fullname: function(){
+        return this.fname + " " + this.lname; },
+        code: 12,
+        today: new Date(),
+        };
+
+document.getElementById("demo").innerHTML = person.fullname() +" is from " + person.city;
+var txt = "";
+for(x in person){
+if(typeof person[x] != "function"){
+txt +=  person[x] + " ";}
+}
+document.getElementById("demo2").innerHTML = txt;
+
+
+var myArray = Object.values(person);
+document.getElementById("demo3").innerHTML = myArray;
+
+var myString = JSON.stringify(person);
+document.getElementById("demo4").innerHTML = myString;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        div.container {
+            width:400px;
+            height: 100px;
+            border:3px solid black;
+            padding:20px;
+            margin: auto;
+        
+        }
+    </style>
+</head>
+<body>
+	<div ng-app="" ng-init="firstName ='John'; cost=5; amount = 4; arr1=[12,20,17,88]; carObj ={brand:'bmw', year:2017}; msg='hello world'">        
+    <!-- Tells AngularJS that this element is the "owner" of an AngularJS application. -->
+    <!-- The ng-init directive initializes AngularJS application variables. Using ng-init is not very common. its better use controllers -->
+    <p><input ng-model="anyName" type="text"></p> <!-- binds the value of the input field to the application variable anyName. -->
+    <p ng-bind="anyName"></p>   <!-- binds the content of the <p> element to the application variable anyName -->
+    <p>the name is: <span ng-bind="firstName"></span></p>
+    <p>my name is : {{anyName+" and "+firstName}}</p>
+    <input type="color" ng-model ="selectedColor">
+    <p>{{selectedColor}}</p>
+    <div class="container" style="background-color:{{selectedColor}};">
+    </div>
+    <p>total is: {{cost*amount}} and the car model is {{carObj.brand}} and the id is {{arr1[2]}} so lets say {{msg}} </p>
+    </div>
+    
+</body>
+</html>	

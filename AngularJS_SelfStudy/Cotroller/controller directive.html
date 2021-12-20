@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">   
+   <p>FirstName<input type="text" ng-model="firstName"></p>
+   <p>lastName<input type="text" ng-model="lastName"></p>
+   <p>Full name: {{fullName()}}</p>
+   <div> <ul>
+        <li ng-repeat="x in names">
+        {{x.firstName +" "+ x.lastName}}
+        </li>
+    </ul>
+   </div>
+   </div>
+<script>
+var app=angular.module("myApp",[]);
+app.controller("myCtrl", function($scope){
+    $scope.firstName="";
+    $scope.lastName="";
+    $scope.fullName=function(){
+        return $scope.firstName+" "+$scope.lastName;
+    };
+    $scope.names=[
+        {firstName:"ali", lastName:"Madani"},
+        {firstName:"saul", lastName:"Goodman"},
+        {firstName:"Eric", lastName:"Malo"},
+        {firstName:"kamal",lastName:"Sabah"}
+    ];
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p"); // create the p
+var node = document.createTextNode("the new content");		//create the text node
+para.appendChild(node);		//add the text node to the new p
+//now we need to place the p we made inside the div
+document.getElementById("div1").appendChild(para);
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿<!doctype>
+<html>
+<body>
+<form>
+First name:<input type="text" name="first name" value="prenom"><br/>
+Last NAme:<input type="text" name="family" value="nom de famille><br>
+Term & condition agreement<br>
+yes<input type="radio" name="agrement" value="yes" checked><br>
+no<input type="radio" name="agrement" value="no"><br>
+<input type="submit" value="its ok?">
+</form>
+</body>
+</html>

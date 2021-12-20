@@ -1,0 +1,1 @@
+﻿<a class="social_icon ion-social-facebook" href="https://www.facebook.com/tannaz.shahzadi"></a><a class="social_icon ion-social-instagram" href="https://www.instagram.com/tannazshahzadi/?hl=en" style="a: hover:background-color: red;"></a> <a class="social_icon ion-social-twitter"></a>

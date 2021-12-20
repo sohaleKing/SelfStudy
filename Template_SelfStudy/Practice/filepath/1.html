@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="ax" src="img_the_scream.jpg" alt="The Scream" width="55" height="70"><br>
+<canvas id="draw1" width="400" height="200" style="border:1px solid black;">doent support</canvas> <br>
+<button onclick="draw()">draw</button>
+
+<script>
+var x = document.getElementById("draw1");
+var z = x.getContext("2d");
+//draw the lines
+z.moveTo(0,50);
+z.lineTo(400,50);
+z.stroke();
+z.moveTo(0,150);
+z.lineTo(400,150);
+z.stroke();
+
+//color
+z.fillStyle = "red";
+z.fillRect(0,0,400,50);
+z.fillStyle="Green";
+z.fillRect(0,150,400,200);
+//Gradient
+var g = z.createLinearGradient(0,51,400,100);
+g.addColorStop(0,"Yellow");
+g.addColorStop(1,"white");
+z.fillStyle = g;
+z.fillRect(0,51,400,100);
+
+//draw the circle
+z.beginPath();
+z.arc(195,100,40,0,2*Math.PI);
+z.stroke();
+
+//stoke a text
+z.font = "14px Arial"
+z.strokeText("Flag", 182, 105);
+// z.fillText("flag" , 182,105);
+
+function draw(){
+var ctx = document.getElementById("draw1");
+var img = document.getElementById("ax");
+  ctx.drawImage(img,10,10);
+}
+</script>
+</body>
+</html>

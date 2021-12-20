@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">   
+    <p ng-bind="firstName"></p>
+    <p>{{lastName}}</p>
+    <!-- when you use ng-bind its like innerHTML, so it will change the content, thats why
+    you can not put a {{string interpoliation}} inside the first <p>, it will change the content
+    when it says ng-bind -->
+    <input type="password" ng-model="pass">
+    <small>{{pass}}</small>
+    <!-- When data in the model changes, the view reflects the change, and when data in the view changes, the model is updated as well. -->
+    <button ng-click="changeName()">click here to change the name!</button>  <!-- its not onclick event!! its ng-click
+    then you have to define the function inside the controller -->
+    
+<script>
+var app=angular.module("myApp",[]);
+app.controller("myCtrl",function($scope){
+   $scope.firstName="Saul";
+   $scope.lastName="Goodman";
+   $scope.changeName=function(){        //$scope.functionName= function(){....}
+       $scope.firstName="John";
+   }
+});
+</script>
+</body>
+</html>

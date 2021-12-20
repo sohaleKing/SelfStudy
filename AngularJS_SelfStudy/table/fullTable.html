@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+        table, th , td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+        }
+
+        table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+        }
+
+        table tr:nth-child(even) {
+        background-color: #ffffff;
+        }
+        </style>
+    </head>
+    
+    <body >
+        <div ng-app="myTable" ng-controller="tableCtrl">
+            <table>
+                <tr><th style="background-color:darkgray;"></th><th>Name</th><th>city</th><th>Country</th></tr>
+                <tr ng-repeat ="x in myData | orderBy: 'City'">
+                    <td>{{ $index + 1 }}</td>
+                    <td ng-if="$odd" style="color:blue">{{x.Name}} </td>
+                     <td ng-if="$even" style="color:green">{{x.Name}} </td>
+                    <td>{{x.City}}</td>
+                    <td>{{x.Country | uppercase}}</td>
+                </tr>
+        </div>
+        <script>
+           var app= angular.module("myTable",[]).controller("tableCtrl", function($scope, $http){
+               $http.get("https://www.w3schools.com/angular/customers.php")
+               .then(function(response){
+                   $scope.myData = response.data.records;});
+           }); 
+        </script>
+    </body>
+</html>

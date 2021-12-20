@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+            div#box{
+                width:500px;
+                height:150px;
+                border: 3px solid black;
+                background-color: lightblue;
+            }
+            p#coords{
+                color:red;
+                position: relative;
+                left:250px;
+                top:75px;
+            }
+        </style>
+    </head>
+    
+    <body ng-app="myApp" ng-controller="myCtrl" ng-init="myStatus=disabled">
+        <div>
+            <input type="checkbox" ng-model="myStatus">Term and Condition Agreement <br>
+            <button ng-disabled="!myStatus" ng-click="toggleShow()">Sign up</button>
+            <div ng-show="showMe">
+                <p>hello World</p>
+                <div id="box" ng-mouseover="myCrd($event)">
+                    <p id="coords">{{x + ","+ y}}</p>
+                </div>
+            </div>
+        </div>
+         <div>
+             
+        </div>
+        <script>
+            var app = angular.module("myApp",[]).controller("myCtrl", function($scope){
+                $scope.showMe =false;
+                $scope.toggleShow = function(){
+                     $scope.showMe =!  $scope.showMe;
+                }
+                $scope.myCrd = function(ev){
+                    $scope.x = ev.clientX;
+                    $scope.y = ev.clientY;
+                }
+
+
+            });
+        </script>
+    </body>
+</html>

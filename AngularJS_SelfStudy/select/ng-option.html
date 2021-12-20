@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<select>
+<option ng-repeat="x in names">{{x}}</option>
+</select>
+<select ng-model="selectedName" ng-options="x for x in shoes">
+</select>
+<select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars"> 
+</select>
+<!-- Using an object as the data source, x represents the key, and y represents the value -->
+<p>Selected Shoes brand is : {{selectedName | lowercase}}</p>
+<p>you brand : {{selectedCar.brand}}</p>
+<p>you model : {{selectedCar.model}}</p>
+<p>you color : {{selectedCar.color}}</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+    $scope.shoes = ["Nike", "Adiddas", "Rebboc"];
+    $scope.cars = {
+        car01 : {brand : "Ford", model : "Mustang", color : "red"},
+        car02 : {brand : "Fiat", model : "500", color : "white"},
+        car03 : {brand : "Volvo", model : "XC90", color : "black"}
+    }
+});
+</script>
+
+<p>This example shows how to fill a dropdown list using the ng-repeat directive.</p>
+
+</body>
+</html>

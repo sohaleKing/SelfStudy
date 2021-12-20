@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Getters and Setters</h2>
+
+<p>Perfect for creating counters:</p>
+
+<p id="demo"></p>
+<button id="reset" onclick="reset()">reset</button>
+<script>
+var obj1 = {counter : 10};
+Object.defineProperty(obj1, "reset" , {
+get: function(){return this.counter = 0;}
+});
+Object.defineProperty(obj1, "increse", {
+get: function(){ this.counter++;}
+});
+Object.defineProperty(obj1, "decrese", { 
+get: function(){this.counter--;}
+});
+Object.defineProperty(obj1, "add", {
+set: function(value){this.counter+=value}
+});
+Object.defineProperty(obj1, "multiple", {
+set: function(value){this.counter*=value;}
+});
+obj1.reset;
+obj1.increse;
+obj1.increse;
+obj1.decrese;
+obj1.add=5;
+obj1.add = 10;
+obj1.multiple = 2;
+obj1.increse;
+document.getElementById("demo").innerHTML = obj1.counter;
+</script>
+
+</body>
+</html>

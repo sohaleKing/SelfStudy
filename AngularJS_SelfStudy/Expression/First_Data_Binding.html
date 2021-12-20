@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script></head>
+
+<body>
+<div ng-app="" ng-init="price=0; quantity=0;">
+<input type="range" ng-model="price" max = 100000>{{price}}<br><br>
+<input type="range" ng-model="quantity" max = 100000>{{quantity}}
+<p>The Totall price is {{price*quantity}}</p>
+</div>
+</body>
+</html>

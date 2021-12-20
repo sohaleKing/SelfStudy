@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+        
+        </style>
+    </head>
+    
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+           <p>
+                the name is {{firstName | lowercase}} which is same as {{firstName | uppercase}}
+           </p>
+           <ul ng-repeat="x in cars | orderBy : sortBy">      <!-- if we didnt have the buttons you should write it like <ul ng-repeat="x in cars | orderBy: 'year'" -->
+               <li>{{x.make + " "+ x.model }} price = {{price | currency}}</li>
+            </ul>
+            <button  ng-click="sort('make')">Order by Make</button>
+            <button  ng-click="sort('year')">Order by Year</button>
+            <button ng-click="sort('model')">Order by Model</button>
+        </div>
+         <div>
+             
+        </div>
+        <script>
+            var app = angular.module("myApp",[]).controller("myCtrl", function($scope){         //we can merge it instead of starting at new line with app.controller (.....)
+                $scope.firstName = "Ali";
+                $scope.lastName = "Madani";
+                $scope.cars = [
+                    {make:"Jaguar", year:2020, model:"F-Pace"},
+                    {make:"BMW", year:2018, model:"X3"},
+                    {make:"Benz", year:2021, model:"C300"},
+                    {make:"Cadillac", year:2019, model:"XT5"},
+                    {make:"Toyota", year:2016,model:"Pruis"},
+                    {make:"Honda", year:2007, model:"Accord"},
+                    {make:"Ford", year:2014, model:"Fusion"},
+                ];
+                $scope.price = 10000;
+                $scope.sort=function(prm){
+                    $scope.sortBy = prm;
+                }
+            });
+        </script>
+    </body>
+</html>

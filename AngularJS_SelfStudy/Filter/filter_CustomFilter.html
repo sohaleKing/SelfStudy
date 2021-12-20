@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+        
+        </style>
+    </head>
+    
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+           <ul>
+               <li ng-repeat="x in names">
+                   {{x | myfilter}}
+               </li>
+           </ul>
+        </div>
+         <div>
+             
+        </div>
+        <script>
+            var app = angular.module("myApp",[]).controller("myCtrl", function($scope){         //we can merge it instead of starting at new line with app.controller (.....)
+                $scope.names = ['ali','hassan','john','sara','honey','nina','farhad','alex','bryn','gina','isaac','mike','qaz','tina'];
+            });
+            app.filter("myfilter", function(){
+                    return function(x){
+                     var text = ""
+                     for(var i=0; i<x.length; i++){
+                        if(i==0){
+                            c= x[0].toUpperCase();
+                            text+=c;
+                        }else{
+                            text+=x[i];
+                        }
+                     }
+                    return text;
+                    }
+
+            });
+        </script>
+    </body>
+</html>

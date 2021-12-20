@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">   <!--$rootScope -->
+        <div>
+            the rootScope favourite car is {{car}}
+        </div>
+        <div ng-controller="myCtrl">
+            the currentScope favourite car is {{car}}
+        </div>
+        <div>
+            the rootScope favourite car still is {{car}}
+        </div>
+        <script>
+            var app = angular.module("myApp",[]);
+            app.run(function($rootScope){
+                $rootScope.car = "Jaguar";
+            });
+            app.controller("myCtrl",function($scope){
+                $scope.car = "BMW";
+            });
+            
+        </script>
+    </body>
+</html>

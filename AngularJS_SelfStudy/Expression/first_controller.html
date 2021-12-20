@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <my-custom-directive></my-custom-directive>
+
+<script>
+    var app = angular.module("myApp",[]);
+    app.directive("myCustomDirective", function(){        //the name is removing the hyphens and start every word with capital
+        return {
+            restrict: "E",
+            template:
+    "<h1>Hi my own Taggg</h1><p>enter you name:<input type='text'></p>"   //everything has to locate in one line!
+    };
+    
+    });
+</script>
+<!--You can invoke a directive by using:
+
+Element name => <my-directive></my-custom-tag>
+Attribute => <div my-directive></div>
+Class => <div class="my-directive"></div>
+Comment => even if you write them here!!! i mean as a comment diretive:my-directive
+The examples above will all produce the same result-->
+</body>
+</html>
