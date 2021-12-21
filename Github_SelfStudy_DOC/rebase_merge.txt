@@ -1,0 +1,21 @@
+Both of these commands are designed to integrate changes from one branch into another branch—they just do it in very different ways.
+
+merge:
+1- git checkout feature
+git merge main
+or 2 - git merge feature main
+
+Merging is a non-destructive operation
+
+rebase:
+1- git checkout feature
+git rebase main
+
+
+rebase is a destructive operation! be careful when someone else is also working on a project 
+rebase re-write the project history by creat brand new commits
+(but easier to track the changes than merge) when git log!! it eliminates the unnecessary merge commits required by git merge  you get a much cleaner project history.
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p>this is a closure function example</p>
+    <a href="#" id="size-12">12</a>
+    <a href="#" id="size-24">24</a>
+    <a href="#" id="size-48">48</a>
+    <script>
+      let changeSize = (size) => {
+        return function () {
+          //if there was no return! means the size was 48 all the time!! last funtion call statement
+          document.body.style.fontSize = size + "px";
+        };
+      };
+      let size12 = changeSize(12);
+      let size24 = changeSize(24);
+      let size48 = changeSize(48);
+      document.getElementById("size-12").onclick = size12;
+      document.getElementById("size-24").onclick = size24;
+      document.getElementById("size-48").onclick = size48;
+      //onclick has to be assigned to a function refrence not a function call!
+      //if it was a function call like size12()it return the function(){....} which is a refrence and it would be undefined!!!!
+      //on the HTML side it will call a function but on JS side document.getElement it has to be a function refrence!
+    </script>
+  </body>
+</html>
