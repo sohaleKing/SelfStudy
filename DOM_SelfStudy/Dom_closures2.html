@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    const changeColor = (color) => {
+      return function () {
+        document.body.style.backgroundColor = color;
+      };
+    };
+    let blueColor = changeColor("blue");
+    let greenColor = changeColor("green");
+
+    document.getElementById("blue").addEventListener("click", blueColor);
+    document.getElementById("green").addEventListener("click", greenColor);
+    //in fact those are the same as below!!
+    document.getElementById("red").addEventListener("click", () => {
+      document.body.style.backgroundColor = "red";
+    });
+  </script>
+</html>
