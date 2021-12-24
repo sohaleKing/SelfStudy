@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <button id="button" style="padding: 20px 60px"></button>
+    <script>
+      let button = document.querySelector("#button");
+      const colorArray = [
+        "red",
+        "green",
+        "blue",
+        "pink",
+        "yellow",
+        "black",
+        "orange",
+        "purple",
+      ];
+
+      const changeColorAction = (color) => {
+        button.style.backgroundColor = color;
+      };
+      //changeColor return a closure function which change the color every timeStep sec!!
+      const changeColor = () => {
+        return function (closure, timeSteps) {
+          setTimeout(() => {
+            changeColorAction(closure);
+          }, timeSteps * 1000);
+        };
+      };
+      colorArray.forEach(changeColor(changeColorAction, 1000));
+    </script>
+  </body>
+</html>

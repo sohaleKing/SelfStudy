@@ -33,3 +33,13 @@ const closure_Func = () => {
 
 let myFunc = closure_Func();
 myFunc();
+
+//A closure gives you access to an outer function’s scope from an inner function.
+
+const closure2 = (param) => {
+  return function () {
+    console.log(param);
+  };
+};
+let msg1 = closure2("Hi from closure2");
+msg1();
