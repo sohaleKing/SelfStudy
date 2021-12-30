@@ -1,11 +1,13 @@
-//for(start; end; step)
+//for(let indx; end; step by indx)
 //while(condition) {do something}
 //do(something) while(condition)
+//for(let indx of arr) {do something on indx}  //only works on array
+//for(let key in obj) {do something on obj[key]} //better for objects
 
 array = ["A", "B", "C", "D"]; //array are kind of object too
 object = { fistName: "soheyl", lastName: "Rahgozar", age: 38, student: true };
 
-//===================FOR IN========================
+//===================FOR IN========================(ARRAY & OBJECT)
 // By index => for(index in array) {do something on arr[index]}
 for (let currentIndex in array) {
   //console.log(currentIndex)
@@ -16,7 +18,7 @@ for (key in object) {
   console.log(`${key} : ${object[key]}`);
 }
 
-//=====================FOR OF======================
+//=====================FOR OF======================(ONLY ARRAY)
 // By item => for(item of array) {do something on item}
 for (let currentItem of array) {
   console.log(currentItem);
@@ -40,5 +42,13 @@ for (let indx in newArray) {
 //of course the for(start, end, step) also always a right option!
 
 for (let item of newArray) {
+  //only usable for array!!
   console.log(item);
 }
+
+/*
+for (let key of object) {
+  // for...of its only iterable on array not on object!!
+  console.log(key); //will through an error!
+}
+*/
