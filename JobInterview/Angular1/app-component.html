@@ -1,4 +1,4 @@
-<!-- <div fxlayout="row" fxLayoutAlign="center center" class="pageContainer">
+<div fxlayout="row" fxLayoutAlign="center center" class="pageContainer">
   <div>
     <div
       fxLayout
@@ -10,18 +10,7 @@
       <button
         mat-icon-button=""
         matbadgecolor="warn"
-        class="
-          mat-focus-indicator
-          mat-badge
-          mat-icon-button
-          mat-button-base
-          mat-badge-warn
-          mat-badge-overlap
-          mat-badge-above
-          mat-badge-after
-          mat-badge-medium
-          mat-badge-hidden
-        "
+        class="mat-focus-indicator mat-badge mat-icon-button mat-button-base mat-badge-warn mat-badge-overlap mat-badge-above mat-badge-after mat-badge-medium mat-badge-hidden"
       >
         <span class="mat-button-wrapper"
           ><mat-icon
@@ -57,27 +46,24 @@
       "
     >
       <button
+        (click)="start()"
         mat-raised-button=""
         color="primary"
-        class="
-          mat-focus-indicator mat-raised-button mat-button-base mat-primary
-        "
+        [ngClass]="isDisabled ? 'mat-button-disabled' : ''"
+        class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+        disabled="{{ !isDisabled }}"
         style="margin-right: 8px"
       >
         <span class="mat-button-wrapper"> Start receiving </span
         ><span matripple="" class="mat-ripple mat-button-ripple"></span
         ><span class="mat-button-focus-overlay"></span></button
       ><button
+        (click)="stop()"
         mat-raised-button=""
         color="accent"
-        class="
-          mat-focus-indicator
-          mat-raised-button
-          mat-button-base
-          mat-accent
-          mat-button-disabled
-        "
-        disabled="true"
+        [ngClass]="isDisabled ? '' : 'mat-button-disabled'"
+        class="mat-focus-indicator mat-raised-button mat-button-base mat-accent"
+        disabled="{{ isDisabled }}"
       >
         <span class="mat-button-wrapper"> Stop receiving </span
         ><span matripple="" class="mat-ripple mat-button-ripple"></span
@@ -85,4 +71,4 @@
       </button>
     </div>
   </div>
-</div> -->
+</div>

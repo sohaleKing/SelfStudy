@@ -1,24 +1,24 @@
-// import { NgModule } from "@angular/core";
-// import { BrowserModule } from "@angular/platform-browser";
-// import { FormsModule } from "@angular/forms";
+import { Component, VERSION } from "@angular/core";
 
-// import { AppComponent } from "./app.component";
-// import { HelloComponent } from "./hello.component";
-// import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-// import { FlexLayoutModule } from "@angular/flex-layout";
-// import { MatButtonModule } from "@angular/material/button";
-// import { MatIconModule } from "@angular/material/icon";
+@Component({
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
+})
+export class AppComponent {
+  //name = 'Angular ' + VERSION.major;
+  counter: number;
+  isDisabled: boolean;
 
-// @NgModule({
-//   imports: [
-//     BrowserModule,
-//     FormsModule,
-//     BrowserAnimationsModule,
-//     FlexLayoutModule,
-//     MatButtonModule,
-//     MatIconModule,
-//   ],
-//   declarations: [AppComponent, HelloComponent],
-//   bootstrap: [AppComponent],
-// })
-// export class AppModule {}
+  constructor() {
+    this.isDisabled = true;
+  }
+
+  start() {
+    this.isDisabled = false;
+  }
+  stop() {
+    this.isDisabled = true;
+  }
+  reset() {}
+}
