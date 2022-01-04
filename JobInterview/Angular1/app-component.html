@@ -8,9 +8,11 @@
       class="container"
     >
       <button
+        (click)="reset()"
         mat-icon-button=""
         matbadgecolor="warn"
-        class="mat-focus-indicator mat-badge mat-icon-button mat-button-base mat-badge-warn mat-badge-overlap mat-badge-above mat-badge-after mat-badge-medium mat-badge-hidden"
+        class="mat-focus-indicator mat-badge mat-icon-button mat-button-base mat-badge-warn mat-badge-overlap mat-badge-above mat-badge-after mat-badge-medium"
+        [ngClass]="!isVisibale || counter === 0 ? 'mat-badge-hidden' : ' '"
       >
         <span class="mat-button-wrapper"
           ><mat-icon
@@ -28,7 +30,7 @@
         ><span
           id="mat-badge-content-0"
           class="mat-badge-content mat-badge-active"
-          >0</span
+          >{{ counter }}</span
         >
       </button>
     </div>
