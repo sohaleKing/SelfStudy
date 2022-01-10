@@ -18,14 +18,15 @@ for (key in object) {
   console.log(`${key} : ${object[key]}`);
 }
 
-//=====================FOR OF======================(ONLY ARRAY)
+//=====================FOR OF======================(ONLY ARRAY - or iterable Objects like DOM node objects)
 // By item => for(item of array) {do something on item}
 for (let currentItem of array) {
   console.log(currentItem);
 }
+
 //for(key of object) {do something on key}
-// for (key of object) {
-//   console.log(key);
+// for (key of object) { ------>error-----> object is not iterable
+//   console.log(key); ------>error-----> object is not iterable
 // }
 
 /*Do not use for in over an Array if the index order is important
