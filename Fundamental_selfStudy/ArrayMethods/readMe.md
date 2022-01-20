@@ -2,11 +2,11 @@
 
 =========================================================================
 
-# arr1.concat(arr2, arr3)
+# array1.concat(array2, array3, ..., arrayX)
 
 Joins two or more arrays, and returns a copy of the joined arrays
 
-# copyWithin(pasteIndex, copyIndex)
+# arr.copyWithin(targetIndex, startIndex, endIndex)
 
 Copies array elements within the array, to and from specified positions
 
@@ -16,7 +16,7 @@ Returns a key/value pair Array Iteration Object
 
 # arr.every(callbackFn)
 
-Checks if every element in an array pass a test
+Checks if every element in an array pass a test / return boolean
 
 # arr.fill(callbackFn)
 
@@ -24,7 +24,7 @@ Fill the elements in an array with a static value
 
 # arr. filter(callbackFn)
 
-Creates a new array with every element in an array that pass a test
+Creates a new array with every element in an array that pass a test /returns an array
 
 # arr. find(callbackFn)
 

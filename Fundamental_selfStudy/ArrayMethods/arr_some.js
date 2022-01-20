@@ -7,7 +7,7 @@ const arr1 = ["a", "e", "O", "L"];
 vowels = "aeoiyuAEOIYU";
 
 const isAnyVowels = arr1.some((elem) => {
-  return vowels.indexOf(elem) >= 0;
+  return vowels.indexOf(elem) >= 0; //you need return on callback otherwise you get all flase
 });
 
 console.log("isAnyVowels = ", isAnyVowels);

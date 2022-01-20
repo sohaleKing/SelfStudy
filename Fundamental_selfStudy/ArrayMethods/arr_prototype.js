@@ -1,12 +1,13 @@
 //prototype allows you to add new properties and methods to arrays.
 //prototype is a property available with all JavaScript objects.
 // Syntax =>  Array.prototype.newProperty = value  --> it can be also a method and a function body!
+const arr1 = ["soheyl", "ali", "john", "ericka", "claudia", "nicole", "lexy"];
+const arr2 = [4, 3, 12, 8, 10, 7, 5, 1, 33];
 
 Array.prototype.last = function () {
   return this[this.length - 1];
 };
 //we added a new methods to array methods! pop, foreach all those are prebuild methods! we can have our own methods
-arr1 = ["soheyl", "ali", "john", "ericka", "claudia", "nicole", "lexy"];
 
 console.log(arr1.last());
 
@@ -36,16 +37,9 @@ Array.prototype.evenLength = function () {
   }
   return evenLength;
 };
-arr2 = [4, 3, 12, 8, 10, 7, 5, 1, 33];
+
 console.log(arr2.evenLength());
 
 Array.prototype.owner = "JavaScript"; //that will apply to any array!
 console.log(arr1.owner);
 console.log(arr2.owner);
-//The length property sets or returns the number of elements in an array. its not a function!
-console.log("arr length", arr1.length);
-arr2.length = 12; //so it will expand the array size with new element of undefined!
-console.log(arr2);
-//to remove from arr2 =>
-arr2.length = 2; //will keep only the first 2 elements
-console.log(arr2);

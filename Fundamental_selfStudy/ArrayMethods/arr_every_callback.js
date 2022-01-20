@@ -1,8 +1,8 @@
-//The every() method tests whether all elements in the array pass the test implemented by the provided function.
+//The every() tests whether all elements in the array pass the test implemented by the provided function or not?
 //It returns a Boolean value.
-//it has to return true to all element to make the final every true
+//it has to return true to all element to make the final every() to true
 //============================================
-//=======syntax======
+//====================syntax==================
 //arr.every(callback)  and that callback must have return like ()=>{return condition}
 
 const array = [6, 10, 14, 22, -24, 30, 2];

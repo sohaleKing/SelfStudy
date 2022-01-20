@@ -8,5 +8,6 @@ console.log("is supported language?", arr1.includes("en")); //En is different th
 const arr2 = ["my name is Soheyl Rahgozar I can speak in english and french"];
 
 //to search a word inside a string! you need to do with indexof
+//with includes you need to put the whole element to get true!
 console.log("word english exsit in context?", arr2[0].indexOf("english") > -1);
 //doesnt work that way!! =X=> arr2.includes("good") return false

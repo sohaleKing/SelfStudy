@@ -4,7 +4,7 @@ const arr1 = [5, 13, 21, 27, 9, 13, 15, 8, 13, 15, 16, 24, 33];
 //searches from left to right(starts at the first element and ends at the last). returns -1 if the value is not found.
 
 console.log(arr1.indexOf(13));
-console.log(arr1.indexOf(13, 2)); //it will start from 3rd element(index =2) and return the fist found index
+console.log(arr1.indexOf(13, 2)); //it will start from 3rd element(index =2) and return the first found index
 console.log(arr1.indexOf(130)); //if not availabe return -1
 
 //===========arr.lastIndexOf(item, [start]) ======================

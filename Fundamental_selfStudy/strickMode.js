@@ -9,3 +9,5 @@ function sample() {
 //if you comment "use strict" it will console number 2 but now it will throw an error!
 
 sample();
+
+// You Cannot Use “use strict” Inside a Function Containing a Rest Parameter

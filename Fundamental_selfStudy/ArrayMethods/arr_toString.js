@@ -8,12 +8,14 @@ console.log(array1.toString());
 const array2 = ["Saul", true, 20, null, 0, "king", undefined, false, "", "end"];
 //for undefined-null-empty string it would put noSpace two commas! like 20,,0
 console.log(array2.toString());
+//cant chain .join since the output is not an array(string)
 
 const array3 = ["Saul", ["king", ["hi", 2]], { status: false, text: "hello" }];
-console.log(array3.toString());
 //this method only works on array! even if there are nested arrays included, it will return a flat string!! but
 //when there is an object included,it will return [object object]
+//result=> Saul,king,hi,2,[object Object]
 
+console.log(array3.toString());
 //base on the objects you might get thise error for each kind
 const myFunc = (x) => x + 1;
 console.log(myFunc.toString()); //its funny it return the same as function in string! its a complete string

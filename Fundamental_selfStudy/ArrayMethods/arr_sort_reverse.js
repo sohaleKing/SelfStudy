@@ -26,6 +26,7 @@ function compareNumbers(a, b) {
 }
 console.log(arr2.sort(compareNumbers));
 
+//or by modifying the prototype property(methods)
 Array.prototype.sortAscending = function () {
   for (let i = 0; i < this.length - 1; i++) {
     for (let j = i; j < this.length; j++) {

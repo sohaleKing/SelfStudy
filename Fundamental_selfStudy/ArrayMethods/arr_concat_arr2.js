@@ -1,6 +1,6 @@
 //The arr1.concat(arr2) method returns (joins) two or more arrays a new array,
-//containing the joined arrays. does not change the existing arrays.
-//Syntax => array1.concat(array2, array3, ..., arrayX)
+//containing the jarray1.concat(array2, array3, ..., arrayX)oined arrays. does not change the existing arrays.
+//Syntax =>
 
 arr1 = [4, null, 22];
 arr2 = [true, 2];

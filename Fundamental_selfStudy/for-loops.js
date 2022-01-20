@@ -1,7 +1,7 @@
 //for(let indx; end; step by indx)
 //while(condition) {do something}
 //do(something) while(condition)
-//for(let indx of arr) {do something on indx}  //only works on array
+//for(let indx of arr) {do something on indx}  //only works on iterable arrays
 //for(let key in obj) {do something on obj[key]} //better for objects
 
 array = ["A", "B", "C", "D"]; //array are kind of object too

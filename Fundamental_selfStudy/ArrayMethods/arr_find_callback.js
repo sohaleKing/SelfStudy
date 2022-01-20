@@ -1,4 +1,4 @@
-//The arr.find(callback) method returns the value of the first element that passes a test.
+//The arr.find(callback) method returns the value of the first element that passes a test. not chainable!
 // retuns undefined if no elements are found. (findIndex return -1)
 //executes a function for each array element. does not execute for empty elements.does not change the original array.
 const arr1 = [4, 3, 2, 12, 18, 11, 26];
