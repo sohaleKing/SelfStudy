@@ -10,3 +10,5 @@ const evenNum = (num) => {
 console.log(arr1.filter((elem) => elem > 10));
 console.log(arr1.filter(evenNum));
 //arr.filter(callback) returns an array
+
+//will be run for all elements, the one who return true at test will be put in the new filtered array and return that to us

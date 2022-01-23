@@ -4,6 +4,7 @@
 //============================================
 //====================syntax==================
 //arr.every(callback)  and that callback must have return like ()=>{return condition}
+//if the callback return true for all the elements in array, every returns true otherwise return false
 
 const array = [6, 10, 14, 22, -24, 30, 2];
 
