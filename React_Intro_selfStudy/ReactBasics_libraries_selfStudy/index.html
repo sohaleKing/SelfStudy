@@ -1,0 +1,28 @@
+<!--
+this methods its not a common methods - using the webpack as a tools to help React works like framework
+First step is making the HTML and add the CDN React libraries (React - ReactDOM - Babel(JSX))
+https://reactjs.org/docs/cdn-links.html
+now with React you can easily manipulate the DOM under the hood (declarative)
+with ReactDOM you show the result (render) in browser
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <!--React library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <!--ReactDOM library-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div id="nativeDOM"></div>
+    <div id="ReactRoot"></div>
+  </body>
+</html>
