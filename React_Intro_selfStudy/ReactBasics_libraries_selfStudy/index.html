@@ -1,9 +1,11 @@
 <!--
 this methods its not a common methods - using the webpack as a tools to help React works like framework
 First step is making the HTML and add the CDN React libraries (React - ReactDOM - Babel(JSX))
-https://reactjs.org/docs/cdn-links.html
+to find CDNs: ==> to find CDNs:https://reactjs.org/docs/cdn-links.html
 now with React you can easily manipulate the DOM under the hood (declarative)
 with ReactDOM you show the result (render) in browser
+with Bable(JSX) adding straigh html syntax to your JS file (you need to add type= "text/babel" or "text/jsx")
+to find CDNs: ==> https://babeljs.io/docs/en/babel-standalone
 -->
 <!DOCTYPE html>
 <html>
@@ -19,7 +21,10 @@ with ReactDOM you show the result (render) in browser
       crossorigin
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
-    <script defer src="main.js"></script>
+    <!--babel (jsx) library added!-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--only works with liveServer-->
+    <script defer src="main.js" type="text/babel"></script>
   </head>
   <body>
     <div id="nativeDOM"></div>

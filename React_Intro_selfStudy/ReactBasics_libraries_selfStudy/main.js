@@ -17,7 +17,7 @@ DOM_createElement.innerHTML = "Native DOM div added by createElement method";
 DomTarget.appendChild(DOM_createElement);
 
 //=================================================================================
-//============================Native DOM Manipulation==============================
+//============================React DOM Manipulation==============================
 //=================================================================================
 const ReactCreateElement = React.createElement(
   "div", //node type
@@ -31,3 +31,20 @@ console.log("DOM Manipulation React Library manner = ", ReactCreateElement);
 //to see the new div added by React in browser
 const ReactTarget = document.getElementById("ReactRoot");
 ReactDOM.render(ReactCreateElement, ReactTarget);
+
+//=================================================================================
+//============================babel/jsx DOM Manipulation==============================
+//=================================================================================
+const BabelJSX_createElement = (
+  <div>babel/jsx DOM div added by createElement method</div> //This is syntactic sugar for React.createElement("div", null, null)
+);
+//pretier will add () before doing it but its not part of the syntax. syntax=> const newDiv = <div></div> thats it
+console.log(
+  "DOM Manipulation Babel/JSX Library manner",
+  BabelJSX_createElement
+); //as you see its very close to DOM React object- not native for sure to browser
+console.log(
+  "DOM Manipulation Babel/JSX Library manner---JSON",
+  JSON.stringify(BabelJSX_createElement)
+);
+//you are only allowed to have one ReactDOM.render(what to display, where to display- target)
