@@ -15,17 +15,17 @@ const Header = () => {
   return (
     <>
       <div>Header</div>
-      <Navbar></Navbar>
+      <Navbar item1="home" item2="about" item3="contact"></Navbar>
     </>
   );
 };
 //you cant just nested component inside the App component needs to do it inside the parent component function
-function Navbar() {
+function Navbar(props) {
   return (
     <ul>
-      <li>Home</li>
-      <li>AboutUs</li>
-      <li>ContactUs</li>
+      <li>{props.item1}</li>
+      <li>{props.item2}</li>
+      <li>{props.item3}</li>
     </ul>
   );
 }
