@@ -1,0 +1,38 @@
+{
+  "name": "mcap",
+  "version": "1.0.0",
+  "description": "Homeowners information CRUD microservice",
+  "main": "server.js",
+  "scripts": {
+    "start-dev": "nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohaleKing/TemporaryMCAP.git"
+  },
+  "author": "Soheyl Rahgozar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sohaleKing/TemporaryMCAP/issues"
+  },
+  "homepage": "https://github.com/sohaleKing/TemporaryMCAP#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "body-parser": "^1.19.1",
+    "body-parser-xml": "^2.0.3",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
