@@ -1,0 +1,19 @@
+.TeamColor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.TeamColor img {
+    width: 500px;
+}
+.msg {
+    font-size: 24px;
+    margin: 10px;
+}
+.picker {
+    display: flex;
+    min-height: 2rem;
+    text-align: center;
+    justify-content: center;
+}

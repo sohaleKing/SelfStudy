@@ -1,0 +1,27 @@
+.BetChips {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.display {
+    padding: 10px;
+    font-size: 100px;
+    font-weight: bold;
+    border: 6px black solid;
+    margin: 10px;
+}
+.bet {
+    font-size: 50px;
+    font-weight: bold;
+}
+.error {
+    font-size: 20px;
+    color: red;
+}
+.button {
+    min-width: 60px;
+    min-height: 40px;
+    margin: 5px;
+    background-color: goldenrod;
+    border: 2px solid black;
+}
