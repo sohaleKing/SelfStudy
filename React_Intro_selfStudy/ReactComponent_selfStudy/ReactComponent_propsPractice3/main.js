@@ -14,6 +14,7 @@ const Header = () => {
     <>
       <div>Header</div>
       <Navbar {...navBarItems}></Navbar>
+      {/* <Navbar {...{ item1: "Home", item2: "aboutUs", item3: "ContactUs" }}></Navbar> */}
     </>
   );
 };
