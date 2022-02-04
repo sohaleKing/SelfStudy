@@ -21,11 +21,13 @@ const Header = () => {
 };
 //you cant just nested component inside the App component needs to do it inside the parent component function
 function Navbar(props) {
+  //props.test = "test"; you cant assigne the props directly, never, it has to be from parent to child not reverse!
   return (
     <ul>
       <li>{props.item1}</li>
       <li>{props.item2}</li>
       <li>{props.item3}</li>
+      {/* <li>{props.test}</li> */}
     </ul>
   );
 }
