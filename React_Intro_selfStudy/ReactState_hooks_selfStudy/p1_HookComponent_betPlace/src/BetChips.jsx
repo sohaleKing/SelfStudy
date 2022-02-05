@@ -43,72 +43,14 @@ export function BetChips() {
                 </div>
             </div>
             <div className="BetChips">
-                <button
-                    className="button"
-                    onClick={() => handler("increment")}
-                    disabled={betValue}
-                >
-                    +1 $
-                </button>
-                <button
-                    className="button"
-                    onClick={() => {
-                        handler("decrement")
-                        maxBet(false)
-                    }}
-                >
-                    -1 $
-                </button>
-                <button
-                    className="button"
-                    onClick={() => handler("multipeTwo")}
-                    disabled={betValue}
-                >
-                    x2
-                </button>
-                <button
-                    className="button"
-                    onClick={() => handler("multipeTen")}
-                    disabled={betValue}
-                >
-                    X10
-                </button>
-                <button
-                    className="button"
-                    onClick={() => {
-                        handler("DividedTwo")
-                        maxBet(false)
-                    }}
-                >
-                    /2
-                </button>
-                <button
-                    className="button"
-                    onClick={() => {
-                        handler("DividedTen")
-                        maxBet(false)
-                    }}
-                >
-                    /10
-                </button>
-                <button
-                    className="button"
-                    onClick={() => {
-                        maxBet(true)
-                        betPlace(1000)
-                    }}
-                >
-                    Max Bet
-                </button>
-                <button
-                    className="button"
-                    onClick={() => {
-                        handler("Reset")
-                        maxBet(false)
-                    }}
-                >
-                    Reset
-                </button>
+                <button className="button" onClick={() => handler("increment")} disabled={betValue}>+1 $</button>
+                <button className="button" onClick={() => { handler("decrement"); maxBet(false)}}>-1 $</button>
+                <button className="button" onClick={() => handler("multipeTwo")} disabled={betValue}>x2</button>
+                <button className="button" onClick={() => handler("multipeTen")} disabled={betValue}>X10</button>
+                <button className="button" onClick={() => {handler("DividedTwo");maxBet(false)}}>/2</button>
+                <button className="button" onClick={() => {handler("DividedTen");maxBet(false)}}>/10</button>
+                <button className="button" onClick={() => {maxBet(true);betPlace(1000)}}>Max Bet</button>
+                <button className="button" onClick={() => {handler("Reset");maxBet(false)}}>Reset</button>
             </div>
         </React.Fragment>
     )
