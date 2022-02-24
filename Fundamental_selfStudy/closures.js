@@ -11,35 +11,65 @@ in which they are defined (public variable)
 
 //Lexical Scoping(static)
 
-const lexical_Func = () => {
-  let name = "Soheyl"; // name is a local variable
+const lexical = () => {
+  let name = "Lexical"; // name is a local variable
   const printName = () => {
     // printName() is the inner function, a closure
     console.log(name); //use variable declared in the parent function
   };
   printName();
 };
-lexical_Func();
+lexical();
 
 //Closure
 // This environment consists of any local variables that were in-scope at the time the closure was created
-const closure_Func = () => {
-  let name = "Rahgozar";
-  const displayname = () => {
+const closure = () => {
+  let name = "closure";
+  const printName = () => {
     console.log(name);
   };
-  return displayname;
+  return printName;
 };
 
-let myFunc = closure_Func();
+let myFunc = closure();
 myFunc();
+
+const closureParam = (param) => {
+  const printName = () => {
+    console.log(param);
+  };
+  return printName;
+};
+
+const msg1 = closureParam("closure with param");
+msg1();
 
 //A closure gives you access to an outer function’s scope from an inner function.
 
-const closure2 = (param) => {
+const closureParam2 = (param) => {
   return function () {
     console.log(param);
   };
 };
-let msg1 = closure2("Hi from closure2");
-msg1();
+let msg2 = closureParam2("closure with param2");
+msg2();
+
+const closureParam3 = (name) => {
+  return function () {
+    console.log(name);
+  };
+};
+const showName = closureParam3("soheyl");
+showName();
+
+/*
+ClosureSyntax ==> 
+const outerFunc =(param)=>{
+  let _privateVaribale = param
+  return innerFunc(){
+    //do some action on _privateVariable
+  }
+} 
+const closureActioner = outerFunc(init)
+closureActioner()
+*/
