@@ -53,3 +53,14 @@ for (let key of object) {
   console.log(key); //will through an error!
 }
 */
+const users = [
+  { name: "mike", age: 20 },
+  { name: "ali", age: 30 },
+  { name: "tom", age: 34 },
+  { name: "bob", age: 24 },
+  { name: "ann", age: 40 },
+  { name: "alica", age: 22 },
+];
+for (let user in users) {
+  console.log(users[user].name);
+}
