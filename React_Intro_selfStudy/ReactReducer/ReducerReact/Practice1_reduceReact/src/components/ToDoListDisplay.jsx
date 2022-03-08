@@ -7,6 +7,9 @@ import CheckIcon from "@mui/icons-material/Check"
 import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 
 export function ToDoListDisplay() {
+ const currentTime = `${new Date().getFullYear()}/${
+  new Date().getMonth() + 1
+ }/${new Date().getDate()}`
  return (
   <React.Fragment>
    <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -20,10 +23,10 @@ export function ToDoListDisplay() {
      }}
     >
      <Grid container spacing={1}>
-      <Grid item>
+      <Grid item xs={2}>
        <Typography sx={{ padding: "0px 15px" }}>Title</Typography>
       </Grid>
-      <Grid item>
+      <Grid item xs={5}>
        <Typography
         sx={{
          borderRight: "1px solid grey",
@@ -34,10 +37,14 @@ export function ToDoListDisplay() {
         Description
        </Typography>
       </Grid>
-      <Grid item>
-       <Typography sx={{ padding: "0px 15px" }}>Created Time</Typography>
+      <Grid item xs={2}>
+       <Typography sx={{ padding: "0px 15px", borderRight: "1px solid grey" }}>
+        Created
+       </Typography>
       </Grid>
-      <Grid item></Grid>
+      <Grid item xs={3}>
+       <Typography sx={{ padding: "0px 15px" }}>Action</Typography>
+      </Grid>
      </Grid>
     </Box>
 
@@ -49,19 +56,21 @@ export function ToDoListDisplay() {
      }}
     >
      <Grid container spacing={1}>
-      <Grid item>
-       <Typography sx={{ padding: "0px 15px" }}>Title</Typography>
+      <Grid item xs={2}>
+       <Typography sx={{ padding: "0px 15px" }}>SelfStudy</Typography>
       </Grid>
-      <Grid item>
-       <Typography sx={{ padding: "0px 15px" }}>Description</Typography>
+      <Grid item xs={5}>
+       <Typography sx={{ padding: "0px 15px" }}>React new Features</Typography>
       </Grid>
-      <Grid item>
-       <Typography sx={{ padding: "0px 15px" }}>Created Time</Typography>
+      <Grid item xs={2}>
+       <Typography sx={{ padding: "0px 15px" }}>{currentTime}</Typography>
       </Grid>
-      <Grid item>
-       <ContentCopyIcon />
-       <DeleteOutlinedIcon />
-       <CheckIcon />
+      <Grid item xs={3}>
+       <Typography sx={{ padding: "0px 15px" }}>
+        <ContentCopyIcon />
+        <DeleteOutlinedIcon />
+        <CheckIcon />
+       </Typography>
       </Grid>
      </Grid>
     </Box>
