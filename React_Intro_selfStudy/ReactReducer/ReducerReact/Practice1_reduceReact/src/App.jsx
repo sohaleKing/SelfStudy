@@ -6,7 +6,12 @@ import { ToDoList } from "./components/ToDoList"
 
 export function App() {
  return (
-  <Box sx={{ display: "flex", justifyContent: "center" }}>
+  <Box
+   sx={{
+    display: "flex",
+    justifyContent: "center",
+   }}
+  >
    <Paper elevation={3}>
     <Header />
     <ToDoList />
