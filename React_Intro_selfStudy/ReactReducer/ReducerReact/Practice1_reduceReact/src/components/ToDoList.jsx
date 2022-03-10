@@ -3,7 +3,7 @@ import { ToDoListDisplay } from "./ToDoListDisplay"
 import { ToDoListAction } from "./ToDoListAction"
 import Box from "@mui/material/Box"
 import { Typography } from "@mui/material"
-import { toDoListsData } from "../services/toDoList"
+import { toDoListsData } from "../services/toDoListData"
 
 export function ToDoList() {
  return (
