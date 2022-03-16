@@ -35,3 +35,12 @@ returns false if the function returns false for one element.
 does not execute the function for empty elements.
 does not change the original array
 */
+const arr4 = ["Bella", "Baram", "Bahram", "Baba"];
+const start_B = (arr) => {
+  console.log(
+    arr.every((elem) => {
+      return elem[0] === "B";
+    })
+  );
+};
+start_B(arr4); //=>true

@@ -14,3 +14,6 @@ for (currentIndex of userArray_IndexedArray) {
   //=> [ 0, 'Soheyl' ] [ 1, 'Rahgozar' ] [ 2, 30 ] [ 3, true ]
 }
 //does not change the original array.
+
+const arr1 = ["element1", "elemen2"];
+arr1.entries(); //=> [[0,"elemen1"], [1, "element2"]]
