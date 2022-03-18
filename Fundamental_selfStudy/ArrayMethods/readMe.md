@@ -1,6 +1,6 @@
 # readME => MD = Mark Down - index markDown
 
-=========================================================================
+# https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 # array1.concat(array2, array3, ..., arrayX)
 

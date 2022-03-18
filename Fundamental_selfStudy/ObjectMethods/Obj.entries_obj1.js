@@ -1,3 +1,6 @@
+//Object.entries(obj) => returns an array
+//Object.fromEntries(arr) => return an object
+
 const names = {
   soheyl: 100,
   tannaz: 99,

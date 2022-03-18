@@ -1,5 +1,5 @@
 //arr.forEach(callback) => executes a provided function(callback) once for each array element.
-//it returns undefined when you assigned it and  is not chainable
+//it returns undefined when you assigned it and  is not chainable - dont use return
 //callbackFn = Function to execute on each element.
 arr1 = ["first", "second", "third", "forth", "fifth"];
 // Using .forEach()   console.log each element of newArr
@@ -24,6 +24,7 @@ console.log(arr2); //as you see the orginal array hasnt changed!
 arr2.forEach((elem, index, array) => {
   elem % 2 === 0 && array.splice(index, 1); //when you see an even number remove it!
   //but just as an example of modifiy the original array!!
+  //using splice its not good when you have duplicated!!!
   //**********************arr.forEach((item, index, object)=>{do something on object[index]}) ********************/
 });
 console.log(arr2);

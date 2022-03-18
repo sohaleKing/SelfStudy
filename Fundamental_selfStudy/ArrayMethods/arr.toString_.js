@@ -9,6 +9,7 @@ const array2 = ["Saul", true, 20, null, 0, "king", undefined, false, "", "end"];
 //for undefined-null-empty string it would put noSpace two commas! like 20,,0
 console.log(array2.toString());
 //cant chain .join since the output is not an array(string)
+//if you use join it would return as string (like toString) and also you can change the seperator
 
 const array3 = ["Saul", ["king", ["hi", 2]], { status: false, text: "hello" }];
 //this method only works on array! even if there are nested arrays included, it will return a flat string!! but

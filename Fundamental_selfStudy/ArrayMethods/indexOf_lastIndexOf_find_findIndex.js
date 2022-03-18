@@ -40,11 +40,17 @@ console.log(
     return x % 3 === 0;
   })
 );
-//===============arr.filter(callback)================
-//arr.filter() returns all the value of elements which pass the test! result would be an array
-//arr.find() returns only the value of the first element whic pass the test
+
+//====================example===========================
+const array1 = [4, 3, 2, 10, 22, 4, 2, 40];
+
+console.log("indexOf = ", array1.indexOf(2)); //=> will return first found index = 2
+console.log("lastIndexOf", array1.lastIndexOf(2)); //will return the last found index = 6
 console.log(
-  arr1.filter((x) => {
-    return x % 3 === 0;
-  })
+  "findIndex = ",
+  array1.findIndex((x) => x === 2)
+); //the same as indexOf but need a callback, first index who pass the callback test = 2
+console.log(
+  "find = ",
+  array1.find((x) => x > 10) //will return the value of the first element which passes the callback test = value of 22
 );

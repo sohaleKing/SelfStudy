@@ -11,3 +11,6 @@ const object = Object.fromEntries(array);
 
 console.log(object);
 //=> { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' }
+
+//Object.entries(obj) => returns an array
+//Object.fromEntries(arr) => return an object

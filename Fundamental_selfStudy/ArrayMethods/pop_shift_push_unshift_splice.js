@@ -7,7 +7,7 @@ console.log(arr1.pop());
 console.log(arr1);
 
 //arr.shift() method removes the first item of an array. changes the original array. returns the shifted element.
-console.log(arr1.shift());
+console.log(arr1.shift()); //very useful  for FIFO
 console.log(arr1.shift());
 console.log(arr1);
 
@@ -34,3 +34,12 @@ console.log(arr1); //the original array got modified! from index 2 to 4 element 
 console.log(arr1.splice(1, 2, 2, 2, 3, 3)); //returns an array of removed item from 2nd element with 2 element
 //(2nd and 3rd) removed and 2, 2, 3, 3 added from 2nd position! so it pushed the original 4th element to last!
 console.log(arr1);
+
+const array = ["ali", "azar"];
+array.push("bye");
+array.unshift("salam");
+console.log(array);
+let lastone = array.pop();
+let fitstone = array.shift();
+console.log(`${fitstone} and ${lastone}`);
+console.log(array);

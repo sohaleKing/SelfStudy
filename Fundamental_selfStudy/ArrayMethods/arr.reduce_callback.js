@@ -1,7 +1,12 @@
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 // arr.reduce(reducer_callbackFn) executes a reducer function for array element.
 // returns a single value: the function's accumulated result.
+//The first time that the callback is run there is no "return value of the previous calculation".
+//If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value
+// and iteration starts from the next element
 // does not execute the function for empty array elements does not change the original array.
 // Syntax => arr.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+//array1.reduce((previousValue, currentValue) => previousValue + currentValue,initialValue)
 //simple syntax => arr.reduce(callback) => needs a function as argument otherwise throw the error "undefined its not a function"
 
 const arr1 = [1, 2, 3, 5, 6, 9, 10];
@@ -57,3 +62,11 @@ console.log(arr1.reduceRight(totalSub)); //total would be from right 10 and each
 //total= -10-3=-13
 //total = -13-2= -15
 //total = -15-1 = -16 return the final result as -16
+
+const num1 = [1, 3, 5, 9, 10];
+
+console.log(
+  num1.reduce((prev, curr) => {
+    return prev + curr;
+  }, 10)
+);
