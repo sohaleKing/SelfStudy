@@ -1,72 +1,93 @@
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-// arr.reduce(reducer_callbackFn) executes a reducer function for array element.
+//https://24ways.org/2019/five-interesting-ways-to-use-array-reduce/
+
 // returns a single value: the function's accumulated result.
-//The first time that the callback is run there is no "return value of the previous calculation".
-//If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value
-// and iteration starts from the next element
 // does not execute the function for empty array elements does not change the original array.
-// Syntax => arr.reduce(function(total, currentValue, currentIndex, arr), initialValue)
-//array1.reduce((previousValue, currentValue) => previousValue + currentValue,initialValue)
-//simple syntax => arr.reduce(callback) => needs a function as argument otherwise throw the error "undefined its not a function"
+// arr.reduce(reducer_callbackFn, startingValue).
+// reducer_callbackFn(Accumulator, currentItem_loop ) // accumulator=current combined value , current item in the loop
+//callbackFn has a return otherwise returns undefined
 
-const arr1 = [1, 2, 3, 5, 6, 9, 10];
-const totalSub = (total, num) => {
-  return total - num; //if there is no return it will return undefined!
-};
-
-arr1.reduce(() => {
-  console.log("hi"); //it will console 7 times "hi" since there are 7 elements in the array!!
-});
-
+//1- Adding numbers together=======================================================================
+const arr1 = [8, 9, 2, 1, 10, 12, 3, 7];
+//if you want to do it with forEach
+// let sum = 0;
+// arr1.forEach((x) => {sum+= x});
+// console.log(sum);
+let startingValue = 0;
 console.log(
-  arr1.reduce((total) => {
-    return total - 5; //will take the first element(1) as total and substract for 6 more times * -5 (-30) to it and returns the result (-29)
-  })
-);
+  "adding numbers = ",
+  arr1.reduce((accumulated, current) => {
+    return accumulated + current;
+  }, startingValue)
+); //=> adding numbers =  52
 
-console.log(arr1.reduce(totalSub)); //will the take the first element as total(1) and substract the rest to it and return the result(-34)
-console.log(
-  arr1.reduce((total, elem) => {
-    return total + elem; //reduce in fact its not only for substract and you can even use the sum(+36)
-  })
-);
-//arr.reduce---->from left to right
-//total= 1
-//new total = 1-2=-1
-//new total =-1-3=-4
-//total = -4-5=-9
-//total= -9-6=-15
-//total = -15-9=-24
-//total = -24-10 = -34 return the final result as -34
+//2- combination of other methods! like fliter + forEach/map ======================================
+//see the imported users array structure in import export folder!
+const { users } = require("../importExport/exportedUser"); //if you just put users without distructing the users, it would be
+//an imported the whole module.exports object not the only user array
+//imagine thats the question: only show the names of users who are students
 
-//-------------------------
-//the whole point is there is a total which is the current value of the first element and will be a total on applying the operation
-//for each other element, so you can even multiple the each other element to that total
-console.log(
-  arr1.reduce((total, num) => {
-    return total * num; //=> 16200
-  })
-);
+//with filter and map
+// const user = users.filter((user) => {
+//   return user.student === true;
+// });
+// const result = user.map((obj) => obj.name);
+// console.log(result);
+startingValue = []; //javascript is not typed so you can change the type
+const merged_methods = users.reduce((accumulated, current) => {
+  //better to call accumulated newArr
+  if (current.student) {
+    accumulated.push(current.name); //when you pass an empty array as starting value you can use push for accumlated
+  }
+  return accumulated;
+}, startingValue);
+console.log("student users are = ", merged_methods); //=> student users are =  [ 'Soheyl Rahgozar', 'Tannaz Zohourian' ]
 
-//===================arr.reduceRight==========
-//The reduceRight() is the same concept as reduce but this method works from right to left.
-//means the total would be the last element(10)
-console.log(arr1.reduceRight((t) => t - 5)); //=>-20
+//3 -creating markup(html) from an array ===========================================================
+//imagine the previos question this time we want to have the names as a list
+startingValue = "";
+const merged_methods_markup =
+  "<ul>" +
+  users.reduce((accumulated, current) => {
+    //better to call accumulated html
+    if (current.student) {
+      accumulated += "<li>" + current.name + "</li>";
+    }
+    return accumulated;
+  }, startingValue) +
+  "</ul>";
+console.log("the list of student users = ", merged_methods_markup); //the merged_method_markup is ready to be injected to the DOM
 
-console.log(arr1.reduceRight(totalSub)); //total would be from right 10 and each time substrct to other
-//arr.reduceRight---->from right to left
-//total= 10
-//new total = 10-9 =1
-//new total =1 - 6= -5
-//total = -5-5= -10
-//total= -10-3=-13
-//total = -13-2= -15
-//total = -15-1 = -16 return the final result as -16
+//4- combining two source of data to an array
+const { grades } = require("../importExport/exportedUser");
+startingValue = [];
+const combined_src_arr = users.reduce((accumulated, current) => {
+  //better to name accumulated => newArr
+  let _key = current.name.replace(" ", ""); //removing the space from name like Soheyl Rahgozar => SoheylRahgozar
+  //BellaRose doesnt have any grade, we should fix if a user doesnt have grades, put it null!
+  if (grades[_key]) {
+    current.grade = grades[_key];
+  } else {
+    current.grade = null;
+  }
+  accumulated.push(current);
+  return accumulated;
+}, startingValue);
 
-const num1 = [1, 3, 5, 9, 10];
+console.log("array of students with grades are = ", combined_src_arr);
 
-console.log(
-  num1.reduce((prev, curr) => {
-    return prev + curr;
-  }, 10)
-);
+//5- combining two source of data to an object=============================================================
+startingValue = {};
+const combined_src_obj = users.reduce((accumulated, current) => {
+  //better to name accumulated => newObj
+  let _key = current.name.replace(" ", "");
+  if (grades[_key]) {
+    current.grade = grades[_key];
+  } else {
+    current.grade = null;
+  }
+  accumulated[_key] = current;
+  return accumulated;
+}, startingValue);
+
+console.log("obj of students with grades are = ", combined_src_obj);
