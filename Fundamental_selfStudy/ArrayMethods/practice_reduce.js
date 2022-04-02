@@ -61,3 +61,28 @@ console.log(
   }, 10) //10 is initial here
 );
 //10+1+2+6 = 19
+
+//map from reduce
+
+const names = [
+  ["soheyl", "bobby"],
+  ["konstantine", "claudia"],
+  ["mercy", "akram"],
+];
+const mapedGroup = names.map((elem, index) => {
+  return `group ${index + 1} = ${elem[0]} & ${elem[1]}`;
+});
+console.log(mapedGroup);
+
+const mapedGroup_reduce = names.reduce((result, curr, index) => {
+  let _element = `group  ${index + 1}= ${curr[0]} & ${curr[1]}`;
+  result.push(_element);
+  return result;
+}, []);
+console.log(mapedGroup_reduce);
+/*
+[
+  'group  1= soheyl & bobby',
+  'group  2= konstantine & claudia',
+  'group  3= mercy & akram'
+]*/
