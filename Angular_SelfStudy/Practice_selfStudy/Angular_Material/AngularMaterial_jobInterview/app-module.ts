@@ -1,4 +1,4 @@
-import { Component, VERSION } from "@angular/core";
+/*import { Component, VERSION } from "@angular/core";
 import { interval } from "rxjs";
 import { takeWhile } from "rxjs/operators";
 
@@ -40,3 +40,4 @@ export class AppComponent {
     this.isVisibale = true;
   }
 }
+*/
