@@ -60,3 +60,6 @@ class Skills {
 const skill1 = new Skills();
 console.log(skill1); //it would be an empty object since the constructor has no param, so there would be no property
 console.log(skill1.showSkills("kong Fu"));
+
+//note:
+//The body of a class is executed in strict mode, so it will throw an error for any strict mistake
