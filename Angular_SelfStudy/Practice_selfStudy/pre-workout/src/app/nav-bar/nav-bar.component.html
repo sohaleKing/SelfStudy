@@ -1,7 +1,10 @@
 <div>
   <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <li *ngFor="let nav of navList" class="nav-item">
+      <a class="nav-link" href="#">{{ nav }}</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
@@ -10,7 +13,7 @@
       <a class="nav-link" href="#">Link</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled">Disabled</a>
-    </li>
+      <a class="nav-link">Disabled</a>
+    </li> -->
   </ul>
 </div>
