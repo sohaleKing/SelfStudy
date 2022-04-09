@@ -91,3 +91,8 @@ class Iranian implements People {
   lname: string;
   dob: number;
 }
+
+//Inheritance(extends) dictates that a child class (subclass) inherits all the attributes and methods from a parent class (superclass).
+//Encapsulation dictates that one class must not have access to the (private) data of another class.
+//To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class ...
+//... with the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class.
