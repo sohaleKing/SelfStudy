@@ -24,6 +24,8 @@ import { AboutComponent } from './side-bar/sidebar-about.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: []
+  providers: [],
+  bootstrap: [AppComponent]
 })
+//bootstrap—the root component that Angular creates and inserts into the index.html host web page.
 export class AppModule { }
