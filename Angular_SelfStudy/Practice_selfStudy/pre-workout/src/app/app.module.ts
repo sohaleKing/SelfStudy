@@ -24,7 +24,6 @@ import { AboutComponent } from './side-bar/sidebar-about.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
 export class AppModule { }
