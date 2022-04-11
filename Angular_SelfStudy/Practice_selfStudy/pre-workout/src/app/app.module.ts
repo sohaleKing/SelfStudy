@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { Sidebar } from './side-bar/sidebar.component';
 import { NewsComponent } from './side-bar/sidebar-news.component';
 import { AboutComponent } from './side-bar/sidebar-about.component';
+import { SidebarContent } from './side-bar/sidebar-content.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AboutComponent } from './side-bar/sidebar-about.component';
     ArticleComponent,
     FooterComponent,
     Sidebar,
+    SidebarContent,
     NewsComponent,
     AboutComponent,
   ],

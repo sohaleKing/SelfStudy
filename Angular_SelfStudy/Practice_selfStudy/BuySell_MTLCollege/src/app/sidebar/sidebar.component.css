@@ -1,0 +1,23 @@
+.sidebar {
+    position: fixed;
+    width: 16.66%!important;
+    top: 0;
+    padding: 50px 0px 0px; /* Height of navbar */
+    border-right: 1px solid rgba(0,0,0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    height: calc(100vh - 48px);
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  .side-bar-shortcut{
+      top : 100px;
+  }
+
+  .active {
+    background-color: burlywood;
+    color: azure;
+
+  }

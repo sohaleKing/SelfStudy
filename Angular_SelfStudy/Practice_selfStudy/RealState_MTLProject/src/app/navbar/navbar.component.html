@@ -1,0 +1,41 @@
+<div class="row bg-white">
+<div class="col-4 col-md-3 my-auto"> <!--logo-->
+		<a routerLink="/home"><img src="assets/imgs/logo-realestatel.jpg" alt="logo"></a>
+</div>
+<div class="col-3 col-md-7 my-auto"><!--navbar-->
+	<nav class="navbar navbar-expand navbar-light d-none d-md-block">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto font-weight-bold">
+				<li class="nav-item">
+					<a routerLink="/buy" class="nav-link text-secondary">BUY</a>
+				</li>
+				<li class="nav-item">
+					<a routerLink="/sell" class="nav-link text-secondary">SELL</a>
+				</li>
+				<li class="nav-item">
+					<a a routerLink="/list" class="nav-link text-secondary">BROKER</a>
+				</li>
+				<li class="nav-item">
+					<a routerLink="/tips" class="nav-link text-secondary">GUIDS</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class="col-5 col-md-2 my-auto text-md-right pr-2"><!--login-->
+	<div class="dropdown float-right">		
+		<li class="nav-item dropleft d-inline d-md-none float-left">
+			<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<fa-icon [icon]="faBars" class="text-secondary" size="2x"></fa-icon>
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item">My History</a>
+				<a class="dropdown-item">My Favorites</a>
+				<div class="dropdown-divider"></div>
+				    <a class="dropdown-item">Logout</a>
+				</div>
+		</li>
+		<a routerLink="../login" ><fa-icon [icon]="faUserCog" class="text-secondary px-2 align-middle"  size="2x"></fa-icon></a>
+	</div>		
+</div>
+</div>

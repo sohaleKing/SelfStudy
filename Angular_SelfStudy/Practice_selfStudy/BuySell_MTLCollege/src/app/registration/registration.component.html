@@ -1,0 +1,121 @@
+<div class="container bg-info text-white border border-dark rounded py-5 login_box">
+  <div class="row">
+  <div class="col-12 text-center pb-5">
+  <p class="h1">Sell & Buy - Registration</p>
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="col-sm-6">
+  <div class="row">
+  <div class="col-sm-12 col-6">
+  <img src="imgs/sell_buy_logo.jpg" alt="logo" class="rounded-top logo_img" />
+  </div>
+  <div class="col-sm-12 col-6">
+  <blockquote class="blockquote mt-3">
+    <p class="mb-0">Buy the truth and do not sell it.</p>
+    <footer class="blockquote-footer">wisdom, instruction and insight as well. </footer>
+  </blockquote>
+  </div>
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <form (ngSubmit)="createAccount()" #f="ngForm">
+  <div class="form-row mt-3 mt-sm-0">
+      <div class="col">
+        <input type="text" class="form-control" name="fname" ngModel placeholder="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="lname" ngModel placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-group">
+    <div class="input-group mb-2 mr-sm-2 mt-3">
+      <div class="input-group-prepend">
+        <div class="input-group-text">@</div>
+      </div>
+      <input type="email" class="form-control" name="email" ngModel id="inlineFormInputGroupUsername2" placeholder="Email">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="input-group mb-2 mr-sm-2 mt-3">
+      <div class="input-group-prepend">
+        <div class="input-group-text">**</div>
+      </div>
+      <input type="password" class="form-control" 
+      name="pass1" ngModel placeholder="Password">
+    </div>
+      </div>
+    
+     <div class="form-group">
+    <div class="input-group mb-2 mr-sm-2 mt-3">
+      <div class="input-group-prepend">
+        <div class="input-group-text">**</div>
+      </div>
+      <input type="password" class="form-control" 
+      name="pass2" ngModel
+      placeholder="Confirm password">
+    </div>
+      </div>
+
+    <div class="form-row">
+    <div class="col-md-6 mb-3">
+       
+      <select class="form-control" id="exampleFormControlSelect1" name="country" ngModel>
+        <option value="">Country</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+        <option value="iran">Iran</option>
+        <option value="france">France</option>
+      </select>
+    
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" name="city" ngModel placeholder="City">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" name="state" ngModel placeholder="State">
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" name="zip" ngModel placeholder="Zip">
+      </div>
+    </div>
+    
+    <label class="gender_lb">Gender</label>
+    <div class="form-row mb-3">
+    <div class="custom-radio custom-control custom-control-inline">
+      <input type="radio" class="custom-control-input" id="customControlValidation2" name="gender" required>
+      <label class="custom-control-label" for="customControlValidation2">Male</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="customControlValidation3" name="gender" required>
+      <label class="custom-control-label" for="customControlValidation3">Female</label>
+    </div>
+  </div>
+  
+  <label class="categorie_lb">Categories (preferences)</label>
+    <div class="form-row mb-3" ngModelGroup="categories">
+   <div *ngFor="let category of categories; let i= index" class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="customCheck{{i}}" name="{{category.name}}" ngModel ng-checked="false">
+    <label class="custom-control-label" for="customCheck{{i}}">{{category.label}}</label>
+  </div>
+  </div>
+  
+    <div class="form-row mb-3">
+      <label for="validationTextarea">Description</label>
+      <textarea class="form-control" id="validationTextarea" placeholder="what you are interested in?"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-warning">Submit</button>
+  </form>
+  </div>
+  </div>
+  
+  <div class="row pt-3">
+  <div class="col-12 text-right">
+  <p><a routerLink="/" class="text-dark">Login now</a></p>
+  </div>
+  </div>
+  
+  </div> 

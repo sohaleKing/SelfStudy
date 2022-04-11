@@ -2,6 +2,6 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "sidebar-news",
-  template: "<p>news component<p>",
+  templateUrl: "./sidebar-news.component.html",
 })
 export class NewsComponent {}

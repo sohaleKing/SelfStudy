@@ -1,0 +1,88 @@
+<div class="row center">
+    <div class="container bg-light center">
+
+ <!--=========HEADER==========-->
+     <app-navbar></app-navbar>
+
+<!--=========Login==========-->
+<div class="row">
+    <div class="col-5 mx-auto">
+        <div class="container bg-light py-5">
+            <div class="register-form">
+                <form (submit)="createAccount()">
+                    <img class="rounded mx-auto d-block" src="assets/imgs/register-icon.png" alt="" width="72" height="72" >
+                    <h2 class="text-center">Register</h2>
+                    <div class="form-group">
+                        <div class="input-group">
+                            
+                            <input type="text" class="form-control mr-1" placeholder="First Name" required
+                            name="fname" [(ngModel)]="account.first_name">
+                           
+                            <input type="text" class="form-control ml-1" placeholder="Last Name" required
+                            name="lname" [(ngModel)]="account.last_name">
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                           
+                            <input type="email" class="form-control" placeholder="Email" required
+                            name="email" [(ngModel)]="account.email">
+                         </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                         
+                            <input type="password" class="form-control" placeholder="Password" required
+                            id="InputPassword1" name="pass1" [(ngModel)]="pass1" (input)="checkPasswordMatching()"
+                            [ngStyle]="{'border' : errorStyle}">
+                        </div>
+                    </div>
+                    <div  *ngIf="errorStyle != 'none'; else matching">
+                        <small class="text-warning">Password and Confirm password are not matching</small>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                         
+                            <input type="password" class="form-control" placeholder="Confirm Password" required
+                            id="InputPassword2" name="pass2" [(ngModel)]="pass2" (input)="checkPasswordMatching()"
+                            [ngClass]="{errorStyle2 : errorStyle != 'none'}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputAddress1" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <select id="inputState" class="form-control" 
+                            name="province" [(ngModel)]="isDisabled" (change)="onChangeState()" required>
+                                <option selected>Province</option>
+                                <option>ON</option>
+                                <option>QC</option>
+                                <option>BC</option>
+                                <option>AB</option>
+                                <option>NS</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control" id="inputCity" placeholder="city"
+                            [disabled]="isDisabled==''" name="city" [(ngModel)]="account.city" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" id="inputZip" placeholder="zip"
+                            [disabled]="isDisabled==''" name="zip" [(ngModel)]="account.zip" required>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block">register</button>
+                    </div>       
+                </form>
+                <p class="text-center small">Already have an account? <a routerLink="/login">Login</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
