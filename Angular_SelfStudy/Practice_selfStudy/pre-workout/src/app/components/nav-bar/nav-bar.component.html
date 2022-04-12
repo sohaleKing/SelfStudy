@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <li><a routerLink="/home">Home</a></li>
+    <!--example of static link-->
+    <li *ngFor="let nav of navList">
+      <a [routerLink]="[nav]">{{ nav[0].toUpperCase() + nav.slice(1) }}</a>
+      <!--to do the first letter capital-->
+      <!--here you have an example of a dynamic link with routerLink-->
+    </li>
+  </ul>
+</div>
