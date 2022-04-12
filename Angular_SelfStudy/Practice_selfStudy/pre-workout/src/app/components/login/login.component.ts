@@ -4,7 +4,6 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"],
 })
 export class LoginComponent implements OnInit {
   constructor(private routerClick: Router) {}
@@ -12,6 +11,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   login() {
-    this.routerClick.navigate(["/home"]);
+    this.routerClick.navigate(["/"]);
   }
 }

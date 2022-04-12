@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/">Home</a></li>
     <!--example of static link-->
     <li *ngFor="let nav of navList">
       <a [routerLink]="[nav]">{{ nav[0].toUpperCase() + nav.slice(1) }}</a>
