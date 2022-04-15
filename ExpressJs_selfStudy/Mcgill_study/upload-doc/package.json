@@ -1,0 +1,17 @@
+{
+  "name": "upload-doc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}

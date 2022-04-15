@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="uploadFile()">
+      <input type="file" name="file" id="file" />
+      <input type="submit" value="submit" />
+    </form>
+    <script>
+      function uploadFile() {
+        const file = document.getElementById("file").files[0];
+        const formData = new FormData();
+
+        formData.append("file", file);
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "http://localhost:3000/upload", true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText);
+          }
+        };
+
+        xhr.send(formData);
+      }
+    </script>
+  </body>
+</html>
