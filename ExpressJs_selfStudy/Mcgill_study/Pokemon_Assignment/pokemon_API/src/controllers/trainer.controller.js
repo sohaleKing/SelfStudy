@@ -20,7 +20,7 @@ router.post(
 
 router.get(
     "/:trainerNameOrId/more-captured/:trainerNameOrId/compare",
-    [findTrainerMiddleware],
+    findTrainerMiddleware,
     compareTrainers
 )
 
@@ -61,7 +61,9 @@ function capturePokemon(req, res) {
 }
 
 function compareTrainers(req, res) {
-    const { trainer } = res.locals
-    console.log(trainer)
-    res.send("hi")
+    const { trainer, trainer2 } = res.locals
+    const moreCaptured =
+        trainer.captured > trainer2.captured ? trainer : trainer2
+    if (trainer.captured !== trainer2.captured) res.json(moreCaptured)
+    res.json({ trainer, trainer2 })
 }

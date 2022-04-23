@@ -22,8 +22,12 @@ function findTrainerMiddleware(req, res, next) {
         res.status(404).end()
         return
     }
+    if (res.locals.trainer) {
+        res.locals.trainer2 = foundTrainer
+    } else {
+        res.locals.trainer = foundTrainer
+    }
 
-    res.locals.trainer = foundTrainer
     next()
 }
 
