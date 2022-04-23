@@ -9,7 +9,7 @@ const PORT = 3000
 app.use(bodyParser.json())
 
 app.use("/pokemon", require("./controllers/pokemon.controller"))
-app.use("/trainers", require("./controllers/trainer.controller"))
+app.use("/trainer", require("./controllers/trainer.controller"))
 
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`)

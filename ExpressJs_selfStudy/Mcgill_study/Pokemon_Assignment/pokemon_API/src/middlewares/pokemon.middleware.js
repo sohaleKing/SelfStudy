@@ -1,7 +1,7 @@
 const { pokemon } = require("../assets/data/state")
 
 //Find Pokemon by name/ID
-function pokemonMiddleware(req, res, next) {
+function findPokemonMiddleware(req, res, next) {
     const pokemonNameOrId = req.params.pokemonNameOrId
     const num = Number(pokemonNameOrId)
 
@@ -26,5 +26,5 @@ function pokemonMiddleware(req, res, next) {
 }
 
 module.exports = {
-    pokemonMiddleware,
+    findPokemonMiddleware,
 }

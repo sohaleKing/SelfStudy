@@ -1,21 +1,27 @@
-const { pokemonMiddleware } = require("../middlewares/pokemon.middleware")
-const { trainerMiddleware } = require("../middlewares/trainer.middleware")
+const { findPokemonMiddleware } = require("../middlewares/pokemon.middleware")
+const { findTrainerMiddleware } = require("../middlewares/trainer.middleware")
 
 const trainers = require("../assets/data/state").trainers
 
 const router = require("express").Router()
 module.exports = router
 
-router.use("/:trainerNameOrId", trainerMiddleware)
+router.use("/:trainerNameOrId", findTrainerMiddleware)
 
 router.get("/", getAllTrainers)
 // With 3 arguments, it means | PATH | MIDDLEWARE (or array of middleware) | HANDLER
-router.get("/:trainerNameOrId", trainerMiddleware, getTrainerByName)
+router.get("/:trainerNameOrId", findTrainerMiddleware, getTrainerByName)
 
 router.post(
     "/:trainerNameOrId/pokemon/:pokemonNameOrId/capture",
-    pokemonMiddleware,
+    findPokemonMiddleware,
     capturePokemon
+)
+
+router.get(
+    "/:trainerNameOrId/more-captured/:trainerNameOrId/compare",
+    [findTrainerMiddleware],
+    compareTrainers
 )
 
 function getAllTrainers(req, res) {
@@ -39,18 +45,23 @@ function capturePokemon(req, res) {
         })
     })
 
-    console.log("taco", pokemon)
-
     if (!found) {
         trainer.capturedPokemon.push({
             ...pokemon,
-            attack: 3,
-            defense: 3,
+            attack: 5,
+            defense: 5,
         })
+        trainer.captured++
         res.json(trainer)
     } else {
         res.status(409).json({
-            message: "you have already captured the pokemon",
+            message: "pokemon already captured",
         })
     }
+}
+
+function compareTrainers(req, res) {
+    const { trainer } = res.locals
+    console.log(trainer)
+    res.send("hi")
 }

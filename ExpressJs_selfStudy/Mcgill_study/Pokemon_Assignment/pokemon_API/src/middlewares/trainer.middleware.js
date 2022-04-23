@@ -1,7 +1,7 @@
 const { trainers } = require("../assets/data/state")
 
 //Find Trainers by name/ID
-function trainerMiddleware(req, res, next) {
+function findTrainerMiddleware(req, res, next) {
     const trainerNameOrId = req.params.trainerNameOrId
 
     const num = Number(trainerNameOrId)
@@ -28,5 +28,5 @@ function trainerMiddleware(req, res, next) {
 }
 
 module.exports = {
-    trainerMiddleware,
+    findTrainerMiddleware,
 }
