@@ -37,7 +37,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:3000/trainer/Akram"
+				"url": "http://localhost:3000/trainer/4"
 			},
 			"response": []
 		},
@@ -46,7 +46,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "localhost:3000/trainer/soheyl/pokemon/3/capture"
+				"url": "localhost:3000/trainer/akram/pokemon/16/capture"
 			},
 			"response": []
 		},
@@ -56,6 +56,24 @@
 				"method": "DELETE",
 				"header": [],
 				"url": "http://localhost:3000/pokemon/3"
+			},
+			"response": []
+		},
+		{
+			"name": "show the trainer who captured more",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/trainer/soheyl/more-captured/akram/compare"
+			},
+			"response": []
+		},
+		{
+			"name": "add a new special power to pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/pokemon/3/addPower/water"
 			},
 			"response": []
 		}
