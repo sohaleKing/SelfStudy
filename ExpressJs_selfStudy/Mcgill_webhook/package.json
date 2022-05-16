@@ -1,0 +1,17 @@
+{
+  "name": "facebook-server",
+  "version": "1.0.0",
+  "description": "practicing the webhook",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soheyl Rahgozar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

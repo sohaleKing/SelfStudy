@@ -1,0 +1,9 @@
+<div>
+  Language selector:
+  <select [(ngModel)]="language" (ngModelChange)="onChangeLanguage($event)">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+  </select>
+  <p>orginal language is = {{ language }}</p>
+  <p>the new language is = {{ newLanguage }}</p>
+</div>

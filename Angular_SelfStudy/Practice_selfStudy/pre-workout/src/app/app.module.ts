@@ -13,6 +13,8 @@ import { AboutComponent } from "./components/main/about.component";
 import { ProductsComponent } from "./components/main/products.component";
 import { ProductDetailsComponent } from "./components/product/product-details.component";
 import { ProductPriceComponent } from "./components/product/product-price.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { ProductPriceComponent } from "./components/product/product-price.compon
     ProductsComponent,
     ProductDetailsComponent,
     ProductPriceComponent,
+    HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
