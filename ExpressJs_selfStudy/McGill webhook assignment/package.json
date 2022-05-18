@@ -1,0 +1,21 @@
+{
+    "name": "webhook-assignment",
+    "version": "1.0.0",
+    "description": "Mcgill NodeJs WebAPI webhook Assignment",
+    "main": "server.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=develop TOKEN=bobby nodemon ./src/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Soheyl Rahgozar",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "express": "^4.18.1",
+        "nodemon": "^2.0.16"
+    },
+    "devDependencies": {
+        "axios": "^0.27.2",
+        "cross-env": "^7.0.3"
+    }
+}
