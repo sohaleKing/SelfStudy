@@ -1,0 +1,10 @@
+.Header {
+    margin: 20px 0px;
+}
+
+.ProductGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
