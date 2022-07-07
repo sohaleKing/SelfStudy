@@ -26,12 +26,16 @@ export function App() {
         fetch(`https://fakestoreapi.com/products/category/${selectedCategory}`)
             .then((res) => res.json())
             .then((res) => setProducts(res)) //if category selected now set the showing product to this res
-    }, [])
+    }, [selectedCategory])
 
     return (
         <React.Fragment>
             <div className="Header">
-                <Header categories={categories} />
+                <Header
+                    categories={categories}
+                    selectedCategory={selectedCategory}
+                    setSelectedCategory={setSelectedCategory}
+                />
             </div>
             <div className="ProductGrid">
                 {products.map((product) => {

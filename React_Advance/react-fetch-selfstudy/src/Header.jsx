@@ -9,11 +9,10 @@ import FormControl from "@mui/material/FormControl"
 import Select from "@mui/material/Select"
 
 export function Header(props) {
-    const { categories } = props
-    const [category, selectedCategory] = useState("")
+    const { categories, selectedCategory, setSelectedCategory } = props
 
     const handleChange = (event) => {
-        selectedCategory(event.target.value)
+        setSelectedCategory(event.target.value)
     }
 
     return (
@@ -40,7 +39,7 @@ export function Header(props) {
                     <Select
                         name="categories"
                         id="categories"
-                        value={category}
+                        value={selectedCategory}
                         onChange={handleChange}
                         sx={{ color: "white" }}
                     >
