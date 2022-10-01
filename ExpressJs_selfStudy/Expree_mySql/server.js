@@ -27,7 +27,7 @@ connection.connect(function (err) {
 
 // connection.end()
 app.get("/", (req, res) => {
-    res.json({ message: print.final })
+    res.json({ message: "hi" })
 })
 
 app.listen(PORT.host, () => {
